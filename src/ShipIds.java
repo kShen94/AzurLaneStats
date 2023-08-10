@@ -679,7 +679,7 @@ public class ShipIds {
 	
 	public static String getShipID(String name) {
 		LinkedList<String> candidates = new LinkedList<String>();
-		Iterator s = shipId.keySet().iterator();
+		Iterator<String> s = shipId.keySet().iterator();
 		while (s.hasNext()) {
 			String current = (String) s.next();
 			if(current.toLowerCase().contains(name.toLowerCase())) {

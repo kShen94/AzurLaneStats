@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
-
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class Abilities {
+	JSONObject shipTemplate = JsonData.shipTemplate;
+	JSONArray skillList;
 	ArrayList<String> skills = new ArrayList<String>();
 	static HashSet<String> skillDict = new HashSet<String>();
 	static ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
@@ -19,10 +20,23 @@ public class Abilities {
 		printTree();
 	}
 	
-	public Abilities(String skill) {
-		skills.add(skill);
+	public Abilities(int skill) {
+		skills.add(skill+"");
 		parseSkills();
 		printTree();
+	}
+	
+	public Abilities(String id) {
+		getSkillList(id);
+		for(int i = 0; i< skillList.length();i++) {
+			skills.add( Integer.toString(skillList.getInt(i)));
+		}
+		parseSkills();
+		printTree();
+	}
+	
+	private void getSkillList(String shipId) {
+		skillList = shipTemplate.getJSONObject(shipId).getJSONArray("buff_list_display");
 	}
 	
 	public static boolean addDict(String value) {

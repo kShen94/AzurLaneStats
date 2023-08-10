@@ -1,6 +1,5 @@
 import java.io.File;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -17,16 +16,17 @@ public class Main {
 		// w for weapon ids
 		// aug for augment ids
 		String mode = "";
-		String shipName = "USS sandy";
+		String shipName = "bearn";
 		boolean retroFlag = true;
+		String buffID = "1013270";
 		String weaponId = "162220";
 		
 		
 		copyFiles(true);
-		run(mode,shipName,retroFlag,weaponId);
+		run(mode,shipName,retroFlag,weaponId,buffID);
 	}
 	
-	public static void run(String mode, String shipName, boolean retroFlag, String weaponId) {
+	public static void run(String mode, String shipName, boolean retroFlag, String weaponId, String buffID) {
 		ShipStats s = new ShipStats();
 		
 		if(mode.equals("w")) {
@@ -34,7 +34,7 @@ public class Main {
 			w.printWeapon();
 		}
 		else if(mode.equals("aug")) {
-			new Abilities("1013270");
+			new Abilities(buffID);
 			for(Weapons w : Abilities.weaponsList) {
 				w.printWeapon();
 			}
@@ -44,9 +44,9 @@ public class Main {
 			s.setRetroTrue(retroFlag);
 			if(id != null) {
 				s.getShipStats(id);
-				s.printStats(125, 100);
+				s.printStats(120, 100);
 				id = s.getID();
-				new ShipSkills(id);
+				new Abilities(id);
 				for(Weapons w : Abilities.weaponsList) {
 					w.printWeapon();
 				}
@@ -64,7 +64,7 @@ public class Main {
 		if(flag) {
 			String src = System.getProperty("user.dir") + "\\src\\";
 			//data repo: https://github.com/AzurLaneTools/AzurLaneData
-			String repoDir = "C:\\Users\\Kevin\\Documents\\GitHub\\AzurLaneData\\CN";
+			String repoDir = "[Insert Directory]\\GitHub\\AzurLaneData\\CN";
 			List<String> sharecfgdata = Arrays.asList("aircraft_template.json","barrage_template.json",
 				"bullet_template.json","ship_data_breakout.json","ship_data_statistics.json","ship_data_template.json","weapon_property.json");
 			List<String> sharecfg = Arrays.asList("ship_data_strengthen.json","ship_data_trans.json","transform_data_template.json");
