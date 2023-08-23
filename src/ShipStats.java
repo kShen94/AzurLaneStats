@@ -75,8 +75,9 @@ public class ShipStats {
 	HashMap<String,Double> transMap = new HashMap<>();
 	Boolean isResearch;
 	double[] rsStats = new double[] {0,0,0,0,0,0,0,0,0,0,0,0,0};
+	HashMap<String,String> skillChange;
 	
-	//Deprecated
+	
 	public void getShipStats(String id) {
 		this.id = id;
 		groupID = id.substring(0, id.length()-1);
@@ -102,6 +103,8 @@ public class ShipStats {
 		for (Research r: Research.values()) {
 			if(r.getName().equals(name)) {
 				rsStats = r.getStats();
+				if(r.hasSkillChange())
+					skillChange=r.getSkillChange();
 				break;
 			}
 		}

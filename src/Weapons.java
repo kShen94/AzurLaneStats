@@ -1,14 +1,11 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 public class Weapons {
 	String weapon_id;
@@ -31,12 +28,12 @@ public class Weapons {
 	HashMap<Integer,Bullets> map = new HashMap<Integer, Bullets>();
 	Stack<Integer> mapValues = new Stack<Integer>();
 	int planeCount;
-	Boolean plane;
+	Boolean plane = false;
 	String target = "";
+	List<Planes> pList = new ArrayList<Planes>();
 
 	public Weapons(String id) {
 		weapon_id = id;
-		plane = false;
 		checkWeapon();
 	}
 	
@@ -44,7 +41,6 @@ public class Weapons {
 		this.target = target;
 		weapon_id = id;
 		correctTarget();
-		plane = false;
 		checkWeapon();
 	}
 	
@@ -52,7 +48,6 @@ public class Weapons {
 		this.target = target;
 		weapon_id = id;
 		correctTarget();
-		this.plane = plane;
 		checkWeapon();
 	}
 
@@ -86,7 +81,7 @@ public class Weapons {
 			baseWeapon = weaponStats.getJSONObject(weapon.getInt("base")+"");
 		else
 			baseWeapon = weapon;
-		//type 10 and 11 are planes?
+		//type 10 and 11
 		if(baseWeapon.getInt("type")== 10 || baseWeapon.getInt("type")== 11 ) {
 			getPlane(weapon_id);
 		}else {
@@ -137,7 +132,7 @@ public class Weapons {
 		for(int j = 0; j < load.length();j++) {
 			loadout.add(load.getInt(j)+"");
 		}
-		new Planes(loadout,planes);
+		Abilities.addPlane(new Planes(loadout,planes));
 	}
 
 
@@ -228,7 +223,7 @@ public class Weapons {
 			t=values.pop();
 			b = map.get(t);
 			//if L/M/H is non-unique, combine bullet counts
-			if(a.getLight()==b.getLight() &&  a.getMedium()==b.getMedium() && a.getHeavy()==b.getHeavy())
+			if(a.getLight()==b.getLight() &&  a.getMedium()==b.getMedium() && a.getHeavy()==b.getHeavy() && a.getBuffID()==b.getBuffID())
 				a.addBullets(b.getBulletCount());
 			else {
 				temp.push(t);

@@ -17,6 +17,7 @@ public class JsonData {
 		static JSONObject strengthenStats;
 		static JSONObject transData;
 		static JSONObject shipTrans;
+		static JSONObject prStrengthen;
 		static {
 			try {
 				shipStats = new JSONObject(new JSONTokener(new FileReader(dir+"\\src\\ship_data_statistics.json")));
@@ -30,6 +31,7 @@ public class JsonData {
 				strengthenStats = new JSONObject(new JSONTokener(new FileReader(dir+"\\src\\ship_data_strengthen.json")));
 				transData = new JSONObject(new JSONTokener(new FileReader(dir+"\\src\\transform_data_template.json")));
 				shipTrans = new JSONObject(new JSONTokener(new FileReader(dir+"\\src\\ship_data_trans.json")));
+				prStrengthen = new JSONObject(new JSONTokener(new FileReader(dir+"\\src\\ship_strengthen_blueprint.json")));
 			}catch(Exception e) {
 				System.out.print(e.getMessage());
 			}

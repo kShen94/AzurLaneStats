@@ -665,7 +665,6 @@ public class ShipIds {
 		shipId.put("Felix Schultz", "499084");
 		shipId.put("Hindenburg", "499094");
 		shipId.put("Flandre", "999024");
-		
 		shipId.put("Hatakaze.META", "9701034");
 		shipId.put("Hatakaze META", "9701034");
 		shipId.put("Nidaime", "10800084");
@@ -673,6 +672,15 @@ public class ShipIds {
 		shipId.put("Hime", "10800094");
 		shipId.put("Princess", "10800094");
 		shipId.put("Marseillaise", "902024");
+		
+
+		shipId.put("Guichen", "802034");
+		shipId.put("Clemenceau", "905024");
+		shipId.put("Painlevé", "807024");
+		shipId.put("Painleve", "807024");
+		shipId.put("Lyon", "805024");
+		shipId.put("Kersaint", "901044");
+		shipId.put("Suffren", "803014");
 
 		
 	}

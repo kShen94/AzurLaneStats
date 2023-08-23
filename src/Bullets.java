@@ -142,6 +142,10 @@ public class Bullets {
 		return heavy;
 	}
 	
+	public int getBuffID() {
+		return buffID;
+	}
+	
 	public void setLight(int l) {
 		light = l;
 	}

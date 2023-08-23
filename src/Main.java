@@ -8,33 +8,49 @@ import org.apache.commons.io.FileUtils;
 public class Main {
 	
 	ShipStats s = new ShipStats();
+	//data repo: https://github.com/AzurLaneTools/AzurLaneData
+	static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
+	
 	//TODO add meta stats, fs skill upgrades, add functionality for rng skills
-	// figure out augs
-	//copy jsons in every update, too lazy to link them to directories
+	//copy jsons in every update
+	//UI
 	public static void main(String[] args) {
 		//operation mode
 		// w for weapon ids
 		// aug for augment ids
 		String mode = "";
-		String shipName = "bearn";
-		boolean retroFlag = true;
-		String buffID = "1013270";
-		String weaponId = "162220";
 		
+		String shipName = "west virginia";
+		boolean retroFlag = true;
+		String buffID = "18550";
+		int buff = 1013270;
+		String weaponId = "163070";
+		
+		int level = 120;
+		int aff = 100;
 		
 		copyFiles(true);
-		run(mode,shipName,retroFlag,weaponId,buffID);
+		run(mode,shipName,retroFlag,weaponId,buffID, buff,level,aff);
 	}
 	
-	public static void run(String mode, String shipName, boolean retroFlag, String weaponId, String buffID) {
+	public static void run(String mode, String shipName, boolean retroFlag, String weaponId, String buffID, int buff, int level, int aff) {
 		ShipStats s = new ShipStats();
 		
 		if(mode.equals("w")) {
-			Weapons w = new Weapons(weaponId);
+			Weapons w = new Weapons(weaponId,true);
 			w.printWeapon();
+			for(Planes p : Abilities.planesList) {
+				p.printWeapons();
+			}
 		}
 		else if(mode.equals("aug")) {
 			new Abilities(buffID);
+			for(Weapons w : Abilities.weaponsList) {
+				w.printWeapon();
+			}
+		}
+		else if(mode.equals("b")) {
+			new Abilities(buff);
 			for(Weapons w : Abilities.weaponsList) {
 				w.printWeapon();
 			}
@@ -44,7 +60,7 @@ public class Main {
 			s.setRetroTrue(retroFlag);
 			if(id != null) {
 				s.getShipStats(id);
-				s.printStats(120, 100);
+				s.printStats(level, aff);
 				id = s.getID();
 				new Abilities(id);
 				for(Weapons w : Abilities.weaponsList) {
@@ -63,11 +79,9 @@ public class Main {
 	public static void copyFiles(boolean flag) {
 		if(flag) {
 			String src = System.getProperty("user.dir") + "\\src\\";
-			//data repo: https://github.com/AzurLaneTools/AzurLaneData
-			String repoDir = "[Insert Directory]\\GitHub\\AzurLaneData\\CN";
 			List<String> sharecfgdata = Arrays.asList("aircraft_template.json","barrage_template.json",
 				"bullet_template.json","ship_data_breakout.json","ship_data_statistics.json","ship_data_template.json","weapon_property.json");
-			List<String> sharecfg = Arrays.asList("ship_data_strengthen.json","ship_data_trans.json","transform_data_template.json");
+			List<String> sharecfg = Arrays.asList("ship_data_strengthen.json","ship_data_trans.json","transform_data_template.json","ship_strengthen_blueprint.json");
 			String skill = "skillCfg.json";
 			String buff = "buffCfg.json";
 			File source;

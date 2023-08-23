@@ -1,8 +1,11 @@
 import java.util.HashMap;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 public enum Research {
 	//PR1
-	Neptune("HMS Neptune", new double[] {10,0,0,199+398+586,0,0,0,17+34+51,0,0,0,0.15}),
+	Neptune("HMS Neptune", new double[] {10,0,0,199+398+586,0,0,0,17+34+51,0,0,0,0,15}),
 	Monarch("HMS Monarch", new double[] {10,0,10,325+651+976,0,0,0,11+21+31,0,0,0,0,15}),
 	Ibuki("IJN Ibuki", new double[] {10,0,0,201+402+603,0,0,0,9+18+26,0,5+10,0,0,15}),
 	Izumo("IJN Izumo", new double[] {10,0,10,347+694+1011,0,0,0,11+21+33,0,0,0,0,15}),
@@ -22,17 +25,23 @@ public enum Research {
 	Odin("KMS Odin", new double[] {10,0,10,289+579+868,0,0,0,16+31+47,0,0,0,0,15}),
 	Champagne("FFNF Champagne", new double[] {10,0,10,285+571+856,0,0,0,11+22+33,0,0,0,0,15}),
 	//PR4
-	Anchorage("USS Anchorage", new double[] {10,0,0,268+537+805,0,0,0,10+21+31,0,5+10,0,0,15}),
-	Hakuryuu("IJN Hakuryū", new double[] {5,10,5,346+691+1037,0,0,0,15+30+45,0,0,0,0,0}),
-	Ägir("KMS Ägir", new double[] {10,0,10,338+675+1014,0,0,0,12+23+34,0,5,0,0,0}),
-	AugustVonParseval("KMS August von Parseval", new double[] {10,0,10,310+621+931,0,0,0,15+30+46,0,0,0,0,15}),
-	MarcoPolo("RN Marco Polo", new double[] {10,0,10,344+688+1032,0,0,0,12+24+35,0,0,0,0,15}),
+	Anchorage("USS Anchorage", new double[] {10,0,0,268+537+805,0,0,0,10+21+31,0,5+10,0,0,15},"18"),
+	Hakuryuu("IJN Hakuryū", new double[] {5,10,5,346+691+1037,0,0,0,15+30+45,0,0,0,0,0},"19"),
+	Ägir("KMS Ägir", new double[] {10,0,10,338+675+1014,0,0,0,12+23+34,0,5,0,0,0},"20"),
+	AugustVonParseval("KMS August von Parseval", new double[] {10,0,10,310+621+931,0,0,0,15+30+46,0,0,0,0,15},"21"),
+	MarcoPolo("RN Marco Polo", new double[] {10,0,10,344+688+1032,0,0,0,12+24+35,0,0,0,0,15},"22"),
 	//PR5
-	Brest("FFNF Brest", new double[] {0,0,10,307+614+921,0,0,0,12+23+35,0,5,0,0,0}),
-	Plymouth("USS Anchorage", new double[] {15,0,0,227+453+681,0,0,0,16+31+46,0,0,0,0,0}),
-	PrinzRupprecht("KMS Prinz Rupprecht", new double[] {5,0,10,344+688+1032,0,0,0,15+29+45,0,0,0,0,0}),
-	Harbin("PRAN Harbin", new double[] {0,10,0,152+305+457,0,0,0,19+38+58,0,0,0,0,0}),
-	Chkalov("SN Chkalov", new double[] {0,0,5,269+539+809,0,0,0,15+30+44,0,0,0,0,0})
+	Brest("FFNF Brest", new double[] {0,0,10,307+614+921,0,0,0,12+23+35,0,5,0,0,0},"27"),
+	Plymouth("HMS Plymouth", new double[] {15,0,0,227+453+681,0,0,0,16+31+46,0,0,0,0,0},"23"),
+	PrinzRupprecht("KMS Prinz Rupprecht", new double[] {5,0,10,344+688+1032,0,0,0,15+29+45,0,0,0,0,0},"24"),
+	Harbin("PRAN Harbin", new double[] {0,10,0,152+305+457,0,0,0,19+38+58,0,0,0,0,0},"25"),
+	Chkalov("SN Chkalov", new double[] {0,0,5,269+539+809,0,0,0,15+30+44,0,0,0,0,0},"26"),
+	//PR6
+	Kearsarge("USS Kearsarge", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"28"),
+	Shimanto("IJN Shimanto", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"29"),
+	FelixSchultz("KMS Felix Schultz", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"30"),
+	Hindenburg("KMS Hindenburg", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"31"),
+	Flandre("MNF Flandre", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"32")
 	
 	;
 	/** 0 - equipment_proficiency_1
@@ -50,25 +59,53 @@ public enum Research {
 	 *  12 - luck
 	 */
 	private final String name;
-	private final double[] stats;
+	private final String plan;
+	private double[] stats;
 	private HashMap<String,String> skillChange = new HashMap<String, String>();
+	private int[] replace = {4,5,6,8};
+	private int[] addStats = {0,1,3,4};
 	
 	Research(String name, double[] stats){
 		this.name = name;
 		this.stats = stats;
+		this.plan = "";
+	}
+	Research(String name, double[] stats,String plan){
+		this.name = name;
+		this.stats = stats;
+		this.plan = plan;
+		getEnhance(plan);
 	}
 	Research(String name, double[] stats,String oldSkill,String newSkill){
 		this.name = name;
 		this.stats = stats;
+		this.plan = "";
 		skillChange.put(oldSkill, newSkill);
+	}
+	Research(String name, double[] stats,String plan, String oldSkill,String newSkill){
+		this.name = name;
+		this.stats = stats;
+		this.plan = plan;
+		skillChange.put(oldSkill, newSkill);
+		getEnhance(plan);
 	}
 	Research(String name, double[] stats,String oldSkill,String newSkill,String oldSkill2,String newSkill2){
 		this.name = name;
 		this.stats = stats;
+		this.plan = "";
 		skillChange.put(oldSkill, newSkill);
 		skillChange.put(oldSkill2, newSkill2);
 	}
 
+	Research(String name, double[] stats, String plan, String oldSkill,String newSkill,String oldSkill2,String newSkill2){
+		this.name = name;
+		this.stats = stats;
+		this.plan = plan;
+		skillChange.put(oldSkill, newSkill);
+		skillChange.put(oldSkill2, newSkill2);
+		getEnhance(plan);
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -79,5 +116,40 @@ public enum Research {
 	
 	public HashMap<String, String> getSkillChange() {
 		return skillChange;
+	}
+	
+	//new pr fp/trp/aa/avi/rld
+	
+	public double[] getEnhance(String plan) {
+		JSONObject prStr = JsonData.prStrengthen;
+		double [] stat = {0,0,0,0,0};
+		JSONObject enhance;
+		JSONArray effect;
+		String search;
+		for(int i =1;i<=35;i++) {
+			search = plan;
+			if(i < 10)
+				search=search+"0";
+			if(prStr.isNull(search+i))
+				break;
+			enhance = prStr.optJSONObject(search+i);
+			effect = enhance.getJSONArray("effect");
+			double[] temp = new double[5];
+			for(int a=0;a<5;a++) {
+				temp[a] = (stat[a] + effect.getInt(a)/100.0);
+			}
+			stat = temp;
+		}
+		for(int b=0; b < 4; b++) {
+			double stemp = stats[replace[b]];
+			stemp += stat[addStats[b]];
+			stats[replace[b]] = stemp;
+		}
+		return stat;
+	}
+	public boolean hasSkillChange() {
+		if(skillChange.isEmpty())
+			return false;
+		return true;
 	}
 }

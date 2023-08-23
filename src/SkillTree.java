@@ -71,6 +71,12 @@ public class SkillTree {
 					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
 					addWeapon(Integer.toString(effect.getInt("weapon_id")),target);
 				}
+				else if(effect.has("skill_id_list")) {
+					JSONArray list = effect.getJSONArray("skill_id_list");
+					for(int l = 0; l < list.length(); l++) {
+						addSkill(Integer.toString(list.getInt(l)));
+					}
+				}
 			}
 		}
 	}
@@ -103,6 +109,12 @@ public class SkillTree {
 				else if(effect.has("weapon_id")) {
 					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
 					addWeapon(Integer.toString(effect.getInt("weapon_id")),target);
+				}
+				else if(effect.has("skill_id_list")) {
+					JSONArray list = effect.getJSONArray("skill_id_list");
+					for(int l = 0; l < list.length(); l++) {
+						addSkill(Integer.toString(list.getInt(l)));
+					}
 				}
 			}
 		}
