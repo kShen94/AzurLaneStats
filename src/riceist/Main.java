@@ -88,7 +88,7 @@ public class Main {
 	public static void run(String mode, String shipName, boolean retroFlag, String weaponId, String buffID, int level, int aff) {
 		ShipStats s = new ShipStats();
 		
-		if(mode.equals("w")) {
+		if(mode.equals("-w")) {
 			Weapons w = new Weapons(weaponId,true);
 			w.printWeapon();
 			for(Planes p : Abilities.planesList) {
