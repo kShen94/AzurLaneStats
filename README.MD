@@ -27,7 +27,7 @@ Options:
 
 # TODO
 
-add functionality for shrapnels
-add enhancement stats for META ships
-add more info to notes section
-change json file directories so they can be used from outside the application or add ability to pull files from data repository
+- add functionality for shrapnels
+- add enhancement stats for META ships
+- add more info to notes section
+- change json file directories so they can be used from outside the application or add ability to pull files from data repository
