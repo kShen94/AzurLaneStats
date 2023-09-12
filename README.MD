@@ -25,7 +25,8 @@ Options:
 -retro <true/false> --default true,returns retrofit stats if applicable
 ```
 
-#TODO
+# TODO
+
 add functionality for shrapnels
 add enhancement stats for META ships
 add more info to notes section
