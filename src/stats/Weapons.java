@@ -283,7 +283,7 @@ public class Weapons {
 	}
 
 
-	public void printWeapon() {
+	public void printWeapon(boolean printExcel) {
 		while(!mapValues.isEmpty()) {
 			Bullets b = map.get(mapValues.pop());
 			System.out.println("-----------------------------------------------");
@@ -312,11 +312,12 @@ public class Weapons {
 				System.out.println("Ignore Shields");
 			if(b.shrapnel)
 				System.out.println("Shrapnel");
-			printExcel(false,b,1);
+			if(printExcel)
+				printExcel(false,b,1);
 		}
 	}
 
-	public void printWeaponBulletMultiplier(int x, boolean isPlane) {
+	public void printWeaponBulletMultiplier(int x, boolean isPlane, boolean printExcel) {
 		while(!mapValues.isEmpty()) {
 			Bullets b = map.get(mapValues.pop());
 			
@@ -345,7 +346,8 @@ public class Weapons {
 				System.out.println("Ignore Shields");
 			if(b.shrapnel)
 				System.out.println("Shrapnel");
-			printExcel(isPlane,b,x);
+			if(printExcel)
+				printExcel(isPlane,b,x);
 		}
 	}
 	

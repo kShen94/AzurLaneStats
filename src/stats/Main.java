@@ -31,10 +31,11 @@ public class Main {
 		
 		//ide usage, change to false when building
 		boolean manual = false;
+		boolean printExcel = false;
 		String shipName = "yuyaki";
 		int level = 120;
 		int aff = 100;
-		String mode = "-b";
+		String mode = "-s";
 		boolean retroFlag = true;
 		String buffID = "60490";
 		String weaponId = "163390";
@@ -43,7 +44,7 @@ public class Main {
 		if(manual == true ) {
 			//change to true to update files
 			copyFiles(true);
-			run(mode,shipName,retroFlag,weaponId,buffID,shipId,level,aff);
+			run(mode,shipName,retroFlag,weaponId,buffID,shipId,level,aff,printExcel);
 		}
 		else if(args.length == 0) {
 			System.out.println(help);
@@ -52,6 +53,7 @@ public class Main {
 			//ship names
 			if (args[0].equals("-s")) {
 				int i = 1;
+				mode = "-s";
 				shipName = args[i];
 				while(++i <= args.length-1 ) {
 					if(args[i].startsWith("-")) {
@@ -90,24 +92,24 @@ public class Main {
 					shipId = args[1];
 				}
 			}
-			run(mode,shipName,retroFlag,weaponId,buffID,shipId,level,aff);
+			run(mode,shipName,retroFlag,weaponId,buffID,shipId,level,aff,printExcel);
 		}
 	}
 	
-	public static void run(String mode, String shipName, boolean retroFlag, String weaponId, String buffID, String shipId, int level, int aff) {
+	public static void run(String mode, String shipName, boolean retroFlag, String weaponId, String buffID, String shipId, int level, int aff, boolean printExcel) {
 		ShipStats s = new ShipStats();
 		
 		if(mode.equals("-w")) {
 			Weapons w = new Weapons(weaponId,true);
-			w.printWeapon();
+			w.printWeapon(printExcel);
 			for(Planes p : Abilities.planesList) {
-				p.printWeapons();
+				p.printWeapons(printExcel);
 			}
 		}
 		else if(mode.equals("-b")) {
 			new Abilities(buffID);
 			for(Weapons w : Abilities.weaponsList) {
-				w.printWeapon();
+				w.printWeapon(printExcel);
 			}
 		}
 		else if(mode.equals("-s")){
@@ -119,10 +121,10 @@ public class Main {
 				id = s.getID();
 				new Abilities(Integer.parseInt(id));
 				for(Weapons w : Abilities.weaponsList) {
-					w.printWeapon();
+					w.printWeapon(printExcel);
 				}
 				for(Planes p : Abilities.planesList) {
-					p.printWeapons();
+					p.printWeapons(printExcel);
 				}
 			}else {
 				System.out.println("Check name or files");
@@ -135,10 +137,10 @@ public class Main {
 			String id = s.getID();
 			new Abilities(Integer.parseInt(id));
 			for(Weapons w : Abilities.weaponsList) {
-				w.printWeapon();
+				w.printWeapon(printExcel);
 			}
 			for(Planes p : Abilities.planesList) {
-				p.printWeapons();
+				p.printWeapons(printExcel);
 			}
 		}
 		else {

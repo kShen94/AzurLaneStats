@@ -39,7 +39,7 @@ public class Planes{
 			return false;
 	}
 	
-	public void printWeapons(){
+	public void printWeapons(boolean printExcel){
 		System.out.println("----------------------------------------------------");
 		System.out.print("AA guns: ");
 		if(AAGuns.isEmpty()) {
@@ -52,7 +52,7 @@ public class Planes{
 		}
 		System.out.println("Total Planes: " + planeCount);
 		for(Weapons w: weaponList) {
-			w.printWeaponBulletMultiplier(planeCount, true);
+			w.printWeaponBulletMultiplier(planeCount, true, printExcel);
 		}
 
 	}
