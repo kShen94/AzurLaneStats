@@ -5,10 +5,6 @@ This is a tool made to assist with Azur Lane datamining, particularly barrage an
 # Usage
 
 This application is compiled on Java JDK 17.0.1.
-This application is dependent on org.json library, you can find the jar at 
-https://github.com/stleary/JSON-java
-
-You will need both jars in the same directory.
 
 To run the application:
 
@@ -31,3 +27,4 @@ Options:
 - add enhancement stats for META ships
 - add more info to notes section
 - change json file directories so they can be used from outside the application or add ability to pull files from data repository
+- convert to a web app
