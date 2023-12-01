@@ -58,7 +58,7 @@ public class SkillTree {
 			return;
 		for(int i = 0; i < b.length(); i++) {
 			JSONObject effect = b.getJSONObject(i);
-			if(effect.has("arg_list")) {
+			if(effect.has("arg_list") && effect.get("arg_list") instanceof JSONObject) {
 				effect = effect.getJSONObject("arg_list");
 				//if skillID is found, add current skillID -> skillID to map
 				if(effect.has("skill_id")) {

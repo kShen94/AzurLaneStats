@@ -37,7 +37,7 @@ public class Main {
 		int aff = 100;
 		String mode = "-s";
 		boolean retroFlag = true;
-		String buffID = "60490";
+		String buffID = "600051";
 		String weaponId = "163390";
 		String shipId = "702074";
 		
