@@ -59,23 +59,26 @@ public class SkillTree {
 		for(int i = 0; i < b.length(); i++) {
 			JSONObject effect = b.getJSONObject(i);
 			if(effect.has("arg_list")) {
-				effect = effect.getJSONObject("arg_list");
-				//if skillID is found, add current skillID -> skillID to map
-				if(effect.has("skill_id")) {
-					addSkill(Integer.toString(effect.getInt("skill_id")));
-				}
-				//if skillID is found, add current skillID -> buffID to map
-				else if(effect.has("buff_id")) {
-					addBuff(Integer.toString(effect.getInt("buff_id")));
-				//if skillID is found, add current skillID -> weaponID to map
-				}else if(effect.has("weapon_id")) {
-					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
-					addWeapon(Integer.toString(effect.getInt("weapon_id")),target);
-				}
-				else if(effect.has("skill_id_list")) {
-					JSONArray list = effect.getJSONArray("skill_id_list");
-					for(int l = 0; l < list.length(); l++) {
-						addSkill(Integer.toString(list.getInt(l)));
+				Object temp = effect.get("arg_list");
+				if(temp instanceof JSONObject) {
+					effect = (JSONObject) temp;
+					//if skillID is found, add current skillID -> skillID to map
+					if(effect.has("skill_id")) {
+						addSkill(Integer.toString(effect.getInt("skill_id")));
+					}
+					//if skillID is found, add current skillID -> buffID to map
+					else if(effect.has("buff_id")) {
+						addBuff(Integer.toString(effect.getInt("buff_id")));
+						//if skillID is found, add current skillID -> weaponID to map
+					}else if(effect.has("weapon_id")) {
+						String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
+						addWeapon(Integer.toString(effect.getInt("weapon_id")),target);
+					}
+					else if(effect.has("skill_id_list")) {
+						JSONArray list = effect.getJSONArray("skill_id_list");
+						for(int l = 0; l < list.length(); l++) {
+							addSkill(Integer.toString(list.getInt(l)));
+						}
 					}
 				}
 			}

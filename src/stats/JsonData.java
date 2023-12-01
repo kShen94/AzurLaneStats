@@ -1,13 +1,9 @@
 package stats;
-import java.io.File;
-import java.io.FileReader;
-
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 public class JsonData {
 
-		static String dir = System.getProperty("user.dir")+"\\resources\\";
 		static JSONObject shipStats;
 		static JSONObject weaponStats;
 		static JSONObject planeStats;
