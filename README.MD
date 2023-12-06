@@ -32,3 +32,4 @@ Options:
 - add more info to notes section
 - change json file directories so they can be used from outside the application or add ability to pull files from data repository
 - convert to a web app (maybe)
+- fix type laser weapons
