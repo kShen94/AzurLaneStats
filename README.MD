@@ -33,3 +33,4 @@ Options:
 - change json file directories so they can be used from outside the application or add ability to pull files from data repository
 - convert to a web app (maybe)
 - fix type laser weapons
+- add support for slash weapons
