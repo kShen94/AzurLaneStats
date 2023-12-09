@@ -698,7 +698,6 @@ public class ShipIds {
 		shipId.put("Mary Celeste", "9600044");
 		shipId.put("Whydah", "9600054");
 		shipId.put("Adventure Galley", "9600064");
-		
 		shipId.put("Asuka", "11000014");
 		shipId.put("Ikaruga", "11000024");
 		shipId.put("Homura", "11000034");
@@ -709,6 +708,8 @@ public class ShipIds {
 		shipId.put("Yuyaki", "11000071");
 		shipId.put("Erebus META", "9713014");
 		shipId.put("Erebus.META", "9713014");
+		shipId.put("Kirov.META", "9702064");
+		shipId.put("Kirov META", "9702064");
 		
 	}
 	

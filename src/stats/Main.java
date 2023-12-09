@@ -9,7 +9,8 @@ public class Main {
 	
 	ShipStats s = new ShipStats();
 	//data repo: https://github.com/AzurLaneTools/AzurLaneData
-	static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
+	//static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
+	static String repoDir = "C:\\Users\\Kevin\\Documents\\GitHub\\AzurLaneData\\CN";
 	
 	static String help = "This is a tool made to assist with Azur Lane datamining, particularly barrage and weapon info \n\n"
 			+ "Usage: ALStats -s <shipName> [options] <args> \n"
@@ -30,9 +31,9 @@ public class Main {
 		// b for buffs		
 		
 		//ide usage, change to false when building
-		boolean manual = false;
-		boolean printExcel = false;
-		String shipName = "yuyaki";
+		boolean manual = true;
+		boolean printExcel = true;
+		String shipName = "hiryuu meta";
 		int level = 120;
 		int aff = 100;
 		String mode = "-s";
@@ -97,7 +98,7 @@ public class Main {
 	}
 	
 	public static void run(String mode, String shipName, boolean retroFlag, String weaponId, String buffID, String shipId, int level, int aff, boolean printExcel) {
-		ShipStats s = new ShipStats();
+		ShipStats s;
 		
 		if(mode.equals("-w")) {
 			Weapons w = new Weapons(weaponId,true);
@@ -113,6 +114,7 @@ public class Main {
 			}
 		}
 		else if(mode.equals("-s")){
+			s = new ShipStats();
 			String id = ShipIds.getShipID(shipName);
 			s.setRetroTrue(retroFlag);
 			if(id != null) {
@@ -131,6 +133,7 @@ public class Main {
 			}
 		}
 		else if(mode.equals("-id")) {
+			s = new ShipStats();
 			s.setRetroTrue(retroFlag);
 			s.getShipStats(shipId);
 			s.printStats(level, aff);
@@ -152,13 +155,28 @@ public class Main {
 	public static void copyFiles(boolean flag) {
 		if(flag) {
 			String src = System.getProperty("user.dir") + "\\src\\";
-			List<String> sharecfgdata = Arrays.asList("aircraft_template.json","barrage_template.json",
-				"bullet_template.json","ship_data_breakout.json","ship_data_statistics.json","ship_data_template.json","weapon_property.json");
-			List<String> sharecfg = Arrays.asList("ship_data_strengthen.json","ship_data_trans.json","transform_data_template.json","ship_strengthen_blueprint.json");
+			List<String> sharecfgdata = Arrays.asList(
+					"aircraft_template.json",
+					"barrage_template.json",
+					"bullet_template.json",
+					"ship_data_breakout.json",
+					"ship_data_statistics.json",
+					"ship_data_template.json",
+					"weapon_property.json");
+			List<String> sharecfg = Arrays.asList(
+					"ship_data_strengthen.json",
+					"ship_data_trans.json",
+					"transform_data_template.json",
+					"ship_strengthen_blueprint.json",
+					"ship_meta_repair.json",
+					"ship_meta_repair_effect.json",
+					"ship_strengthen_meta.json");
+			
 			String skill = "skillCfg.json";
 			String buff = "buffCfg.json";
 			File source;
 			File dest;
+			
 			try {
 					source = new File(repoDir+"\\"+skill);
 					dest = new File(src + "\\"+skill);
@@ -178,6 +196,7 @@ public class Main {
 				}
 				
 			}catch (Exception e) {
+				e.printStackTrace();
 				//TODO insert missing files error
 			}
 		}

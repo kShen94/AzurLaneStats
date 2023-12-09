@@ -20,6 +20,10 @@ public class JsonData {
 		static JSONObject transData;
 		static JSONObject shipTrans;
 		static JSONObject prStrengthen;
+		static JSONObject metaRepair;
+		static JSONObject metaEffect;
+		static JSONObject metaStrengthen;
+		
 		static {
 			try {
 				shipStats = new JSONObject(new JSONTokener(JsonData.class.getResourceAsStream("/ship_data_statistics.json")));
@@ -34,7 +38,13 @@ public class JsonData {
 				transData = new JSONObject(new JSONTokener(JsonData.class.getResourceAsStream("/transform_data_template.json")));
 				
 				shipTrans = new JSONObject(new JSONTokener(JsonData.class.getResourceAsStream("/ship_data_trans.json")));
+				
 				prStrengthen = new JSONObject(new JSONTokener(JsonData.class.getResourceAsStream("/ship_strengthen_blueprint.json")));
+				
+				metaRepair = new JSONObject(new JSONTokener(JsonData.class.getResourceAsStream("/ship_meta_repair.json")));
+				metaEffect = new JSONObject(new JSONTokener(JsonData.class.getResourceAsStream("/ship_meta_repair_effect.json")));
+				metaStrengthen = new JSONObject(new JSONTokener(JsonData.class.getResourceAsStream("/ship_strengthen_meta.json")));
+				
 				
 			}catch(Exception e) {
 				System.out.print(e.getMessage());

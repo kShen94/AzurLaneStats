@@ -308,15 +308,71 @@ public class ShipStats {
 	 */
 	private void importStrengthen() {
 		try {
-			JSONArray a = str.getJSONObject(groupID).getJSONArray("durability");
-			fpStr = a.getInt(0);
-			trpStr = a.getInt(1);
-			
-			aviStr = a.getInt(3);
-			rldStr = a.getInt(4);
+			if(name.contains(".META")) {
+				getMetaStrengthen();
+			}else {
+				JSONArray a = str.getJSONObject(groupID).getJSONArray("durability");
+				fpStr = a.getInt(0);
+				trpStr = a.getInt(1);
+
+				aviStr = a.getInt(3);
+				rldStr = a.getInt(4);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
+	}
+	
+	private void getMetaStrengthen() {
+		JSONObject metaStr = JsonData.metaStrengthen.getJSONObject(groupID+"");
+		JSONObject metaRepair = JsonData.metaRepair;
+		//hp,fp,trp,AA,avi,rld,hit,eva,speed,luck,asw
+		int[] stats = {0,0,0,0,0,0,0,0,0,0,0};
+		
+		List<Object> cannon = metaStr.optJSONArray("repair_cannon").toList();
+		List<Object> reload = metaStr.optJSONArray("repair_reload").toList();
+		List<Object> torp = metaStr.optJSONArray("repair_torpedo").toList();
+		List<Object> air = metaStr.optJSONArray("repair_air").toList();
+		List<Object> effect = metaStr.optJSONArray("repair_effect").toList();
+		
+		for(Object fp : cannon) {
+			fpStr += metaRepair.getJSONObject((int) fp + "").getJSONArray("effect_attr").getInt(1);
+		}
+		for(Object rld : reload) {
+			rldStr += metaRepair.getJSONObject((int) rld + "").getJSONArray("effect_attr").getInt(1);
+		}
+		for(Object trp : torp) {
+			trpStr += metaRepair.getJSONObject((int) trp + "").getJSONArray("effect_attr").getInt(1);
+		}
+		for(Object avi : air) {
+			aviStr += metaRepair.getJSONObject((int) avi + "").getJSONArray("effect_attr").getInt(1);
+		}
+		for(Object eff : effect) {
+			int strId = (int)((List<Object>)eff).get(1);
+			JSONArray metaEffect = JsonData.metaEffect.getJSONObject((int) strId+"").getJSONArray("effect_attr");
+			for(int i = 0; i < metaEffect.length(); i++) {
+				JSONArray stat = metaEffect.getJSONArray(i);
+				switch (stat.getString(0)) {
+					case "durability":
+						hp+= (int)stat.getInt(1);
+						break;
+					case "antiaircraft":
+						aa+= (int)stat.getInt(1);
+						break;
+					case "hit":
+						acc+= (int)stat.getInt(1);
+						break;
+					case "dodge":
+						eva+= (int)stat.getInt(1);
+						break;
+					default:
+						System.out.println("missing "+ stat.getString(0) + " in getMetaStrengthen, groupID: "+ groupID);
+				}
+						
+			}
+		}
+		
+		
 	}
 	
 	/**
