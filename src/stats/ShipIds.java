@@ -710,6 +710,12 @@ public class ShipIds {
 		shipId.put("Erebus.META", "9713014");
 		shipId.put("Kirov.META", "9702064");
 		shipId.put("Kirov META", "9702064");
+		shipId.put("Guam", "118024");
+		shipId.put("Laffey II", "101514");
+		shipId.put("Constellation", "104014");
+		shipId.put("Flasher", "108084");
+		shipId.put("Louisville", "103274");
+		shipId.put("San Jacinto", "107304");
 		
 	}
 	
