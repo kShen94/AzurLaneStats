@@ -9,8 +9,7 @@ public class Main {
 	
 	ShipStats s = new ShipStats();
 	//data repo: https://github.com/AzurLaneTools/AzurLaneData
-	//static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
-	static String repoDir = "C:\\Users\\Kevin\\Documents\\GitHub\\al-json\\CN";
+	static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
 	
 	static String help = "This is a tool made to assist with Azur Lane datamining, particularly barrage and weapon info \n\n"
 			+ "Usage: ALStats -s <shipName> [options] <args> \n"
@@ -33,13 +32,13 @@ public class Main {
 		//ide usage, change to false when building
 		boolean manual = false;
 		boolean printExcel = manual;
-		String shipName = "guam";
+		String shipName = "Huan Ch'ang";
 		int level = 120;
 		int aff = 100;
 		String mode = "-s";
 		boolean retroFlag = true;
-		String buffID = "600051";
-		String weaponId = "163390";
+		String buffID = "18380";
+		String weaponId = "324";
 		String shipId = "702074";
 		
 		if(manual == true ) {

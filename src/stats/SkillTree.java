@@ -58,16 +58,27 @@ public class SkillTree {
 			return;
 		for(int i = 0; i < b.length(); i++) {
 			JSONObject effect = b.getJSONObject(i);
-			if(effect.has("arg_list") && effect.get("arg_list") instanceof JSONObject) {
+			if(effect.has("type") && effect.getString("type").equals("BattleSkillCLSArea")) {
 				effect = effect.getJSONObject("arg_list");
-				//if skillID is found, add current skillID -> skillID to map
+				addSlashWeapon(new SlashWeapon(id+"",
+						effect.getInt("damage_param_a") , 
+						effect.getInt("damage_param_b"), 
+						effect.getDouble("life_time"), 
+						effect.getInt("move_type"), 
+						effect.getInt("range"), 
+						effect.getInt("speed_x"))
+						,id);
+			}
+			else if(effect.has("arg_list") && effect.get("arg_list") instanceof JSONObject) {
+				effect = effect.getJSONObject("arg_list");
+				//if skillID is found, add new skillID -> skillID to map
 				if(effect.has("skill_id")) {
 					addSkill(Integer.toString(effect.getInt("skill_id")));
 				}
-				//if skillID is found, add current skillID -> buffID to map
+				//if skillID is found, add new skillID -> buffID to map
 				else if(effect.has("buff_id")) {
 					addBuff(Integer.toString(effect.getInt("buff_id")));
-				//if skillID is found, add current skillID -> weaponID to map
+				//if skillID is found, add new skillID -> weaponID to map
 				}else if(effect.has("weapon_id")) {
 					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
 					addWeapon(Integer.toString(effect.getInt("weapon_id")),target);
@@ -86,15 +97,19 @@ public class SkillTree {
 		JSONArray b;
 		JSONObject obj = JsonData.buffCfg.getJSONObject("buff_"+id);
 		//navigates through json to find effect_list of the object
-		if(obj.has("effect_list") && obj.get("effect_list") instanceof JSONArray &&!obj.getJSONArray("effect_list").isEmpty() 
+		if (obj.has("10") && (obj.get("10") instanceof JSONObject) && obj.getJSONObject("10").has("effect_list")) {
+			b = obj.getJSONObject("10").getJSONArray("effect_list");
+		}
+		else if(obj.has("effect_list") && obj.get("effect_list") instanceof JSONArray && !obj.getJSONArray("effect_list").isEmpty() 
 				&& !(obj.getJSONArray("effect_list").get(0) instanceof JSONArray)) {
 			b = obj.getJSONArray("effect_list");
-		}else if (obj.has("10") && (obj.get("10") instanceof JSONObject)) {
-			b = obj.getJSONObject("10").getJSONArray("effect_list");
 		}else if(obj.getJSONArray("effect_list").isEmpty())
 			return;
-		else {
+		else if(obj.has("2") && (obj.get("2") instanceof JSONObject)){
 			b = obj.getJSONObject("2").getJSONArray("effect_list");
+		}
+		else{
+			return;
 		}
 		for(int i = 0; i < b.length(); i++) {
 			JSONObject effect = b.getJSONObject(i);
@@ -133,6 +148,10 @@ public class SkillTree {
 	private void addWeapon(String id, String target) {
 		Abilities.addWeapon(id, target);
 		nodes.add(new SkillTree("weapon",id));
+	}
+	
+	private void addSlashWeapon(SlashWeapon sw,String id) {
+		Abilities.addSlashWeapon(sw, id);
 	}
 	
     public String toString() {

@@ -717,6 +717,15 @@ public class ShipIds {
 		shipId.put("Louisville", "103274");
 		shipId.put("San Jacinto", "107304");
 		
+
+		shipId.put("Hu Pen", "501064");
+		shipId.put("Fei Yuen", "501074");
+		shipId.put("Lung Wu", "501054");
+		shipId.put("Kimberly.META", "9701044");
+		shipId.put("Kimberly META", "9701044");
+		shipId.put("Chi An", "502094");
+		shipId.put("Huan Ch'ang", "504014");
+		
 	}
 	
 	public static String getShipID(String name) {

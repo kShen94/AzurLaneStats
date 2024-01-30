@@ -27,8 +27,8 @@ public enum Research {
 	Champagne("FFNF Champagne", new double[] {10,0,10,285+571+856,0,0,0,11+22+33,0,0,0,0,15}),
 	//PR4
 	Anchorage("USS Anchorage", new double[] {10,0,0,268+537+805,0,0,0,10+21+31,0,5+10,0,0,15},"18"),
-	Hakuryuu("IJN Hakuryū", new double[] {5,10,5,346+691+1037,0,0,0,15+30+45,0,0,0,0,0},"19"),
-	Ägir("KMS Ägir", new double[] {10,0,10,338+675+1014,0,0,0,12+23+34,0,5,0,0,0},"20"),
+	Hakuryuu("IJN Hakuryū", new double[] {5,10,5,346+691+1037,0,0,0,15+30+45,0,0,0,0,25},"19"),
+	Ägir("KMS Ägir", new double[] {10,0,10,338+675+1014,0,0,0,12+23+34,0,5,0,0,25},"20"),
 	AugustVonParseval("KMS August von Parseval", new double[] {10,0,10,310+621+931,0,0,0,15+30+46,0,0,0,0,15},"21"),
 	MarcoPolo("RN Marco Polo", new double[] {10,0,10,344+688+1032,0,0,0,12+24+35,0,0,0,0,15},"22"),
 	//PR5

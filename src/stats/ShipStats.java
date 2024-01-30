@@ -84,7 +84,7 @@ public class ShipStats {
 			getRetroStats();
 		}
 		weaponMap();
-		stats = shipStats.getJSONObject(id);
+		stats = shipStats.getJSONObject(this.id);
 		name = stats.getString("english_name");
 		importStats();
 		importStrengthen();
@@ -146,6 +146,7 @@ public class ShipStats {
 			//checks if shipID changes
 			if(!shipid.isEmpty()) {
 				id = shipid.getJSONArray(0).getInt(1)+"";
+				break;
 				//System.out.println("ShipID : "+shipid.getJSONArray(0).getInt(1));
 			}
 			JSONArray effect = transData.getJSONObject(t+"").getJSONArray("effect");

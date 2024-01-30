@@ -53,6 +53,11 @@ public class Abilities {
 			weaponsList.add(new Weapons(id,target));
 	}
 	
+	public static void addSlashWeapon(SlashWeapon sw, String id) {
+		if(skillDict.add(id))
+			weaponsList.add(sw);
+	}
+	
 	public static void addPlane(Planes p) {
 		planesList.add(p);
 	}

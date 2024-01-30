@@ -3,6 +3,7 @@ import java.util.LinkedList;
 import org.json.JSONObject;
 
 public class Planes{
+	String planeID;
 	LinkedList<String> weaponIDs;
 	int planeCount;
 	JSONObject weaponStats = JsonData.weaponStats;
@@ -12,7 +13,8 @@ public class Planes{
 	LinkedList<String> AAGuns = new LinkedList<String>();
 	LinkedList<Weapons> weaponList = new LinkedList<Weapons>();
 	
-	public Planes(LinkedList<String> id, int planes) {
+	public Planes(String planeID,LinkedList<String> id, int planes) {
+		this.planeID = planeID;
 		weaponIDs = id;
 		planeCount = planes;
 		getWeapons();
@@ -52,7 +54,7 @@ public class Planes{
 		}
 		System.out.println("Total Planes: " + planeCount);
 		for(Weapons w: weaponList) {
-			w.printWeaponBulletMultiplier(planeCount, true, printExcel);
+			w.printWeaponBulletMultiplier(planeCount, planeID, printExcel);
 		}
 
 	}
