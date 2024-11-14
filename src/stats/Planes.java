@@ -31,11 +31,15 @@ public class Planes{
 	}
 	
 	private boolean isAAGun(String id) {
-		JSONObject base = weaponStats.getJSONObject(weaponStats.getJSONObject(id).getInt("base")+"");
+		JSONObject base = weaponStats.getJSONObject(weaponStats.getJSONObject(id).optInt("base",Integer.parseInt(id))+"");
 		int type =  base.getInt("type");
 		if(type == 4) {
-			AAGuns.add(base.getString("name"));
-			return true;
+			if(base.has("name"))
+				AAGuns.add(base.getString("name"));
+			else
+				AAGuns.add("No Name");
+			
+				return true;
 		}
 		else
 			return false;

@@ -1,4 +1,6 @@
 package stats;
+import java.util.ArrayList;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -17,6 +19,10 @@ public class Bullets {
 	int antisub;
 	boolean ignoreShield;
 	boolean shrapnel = false;
+	ArrayList<Integer> shrapnelBullet;
+	ArrayList<Integer> shrapnelBarrage;
+	ArrayList<Boolean> shrapnelReaim;
+	String note = "";
 	
 	public Bullets(int bulletid) {
 		bulletID = bulletid;
@@ -54,6 +60,7 @@ public class Bullets {
 		pierce = bullet.getInt("pierce_count");
 		range = bullet.getInt("range");
 		velocity = bullet.getInt("velocity");
+		addBulletNote();
 	}
 	
 	private void getSplash(JSONObject hitType) {
@@ -77,9 +84,35 @@ public class Bullets {
 			offsetX = extra.optInt("randomOffsetX",0);
 			offsetZ = extra.optInt("randomOffsetZ",0);
 			ignoreShield = extra.optBoolean("ignoreShield", false);
-			JSONObject shrapnelCheck = extra.optJSONObject("shrapnel");
-			if(shrapnelCheck != null)
+			if(extra.has("shrapnel")) {
 				shrapnel=true;
+				shrapnelBullet = new ArrayList<Integer>();
+				shrapnelBarrage = new ArrayList<Integer>();
+				shrapnelReaim = new ArrayList<Boolean>();
+				Object shrapnelObj = extra.get("shrapnel");
+				if(shrapnelObj instanceof JSONObject) {
+				//assuming shrapnel will have incremental int
+					int i = 1;
+					while(((JSONObject) shrapnelObj).has(i+"")) {
+						JSONObject shrapnelProp = ((JSONObject)shrapnelObj).getJSONObject(i+"");
+						shrapnelBullet.add(shrapnelProp.getInt("bullet_ID"));
+						shrapnelBarrage.add(shrapnelProp.getInt("barrage_ID"));
+						shrapnelReaim.add(shrapnelProp.has("reaim"));
+						i++;
+					}
+				}
+				else if (shrapnelObj instanceof JSONArray) {
+					int x = 0;
+					while(x < ((JSONArray)shrapnelObj).length()){
+						JSONObject shrapnelProp = ((JSONArray)shrapnelObj).getJSONObject(x);
+						shrapnelBullet.add(shrapnelProp.getInt("bullet_ID"));
+						shrapnelBarrage.add(shrapnelProp.getInt("barrage_ID"));
+						shrapnelReaim.add(shrapnelProp.has("reaim"));
+						x++;
+					}
+
+				}
+			}
 		}
 	}
 	
@@ -96,6 +129,47 @@ public class Bullets {
 		}
 	}
 	
+	private void addBulletNote() {
+		boolean comma = false;
+		if (shrapnel == true) {
+			note = addComma(note,comma);
+			note = note + "Shrapnel";
+			comma=true;
+		}
+		if (ignoreShield == true) {
+			note = addComma(note,comma);
+			note = note + "Ignore shields";
+			comma=true;
+		}
+		if (pierce > 0) {
+			note = addComma(note,comma);
+			note = note + "pierce " + pierce;
+			comma=true;
+		}
+		
+		if(offsetX > 0 && offsetX==offsetZ) {
+			note = addComma(note,comma);
+			note = note + offsetX + " spread";
+			comma=true;
+		}
+		else if(offsetX > 0 && offsetZ > 0) {
+			note = addComma(note,comma);
+			note = note + offsetX+ " spreadX, "+ offsetZ + " spreadZ";
+			comma=true;
+		}
+		
+		if(splash > 0 && splash != 3) {
+			note = addComma(note,comma);
+			note = note + splash + " splash";
+			comma=true;
+		}
+	}
+	
+	private String addComma(String note, boolean comma) {
+		if(comma)
+			note = note + ", ";
+		return note;
+	}
 	
 	private void getAmmoType(int ammo) {
 		switch(ammo) {
@@ -123,6 +197,14 @@ public class Bullets {
 		default:
 			ammoType = "Unknown";
 		}
+	}
+	
+	public void prependNote(String s) {
+		if(note.isBlank())
+			note = s;
+		else
+			note = s + ", " + note;
+			
 	}
 	
 	public int getBulletID() {
@@ -181,6 +263,14 @@ public class Bullets {
 	public void setBuffID(int buff) {
 		buffID = buff;
 	}
+	public String getNote() {
+		return note;
+	}
+	public boolean hasShrapnel() {
+		return shrapnel;
+	}
+
+
 }
 
 

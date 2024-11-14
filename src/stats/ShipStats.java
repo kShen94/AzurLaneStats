@@ -16,6 +16,7 @@ public class ShipStats {
 	JSONObject shipTemplate = JsonData.shipTemplate;
 	JSONObject str = JsonData.strengthenStats;
 	JSONObject stats;
+	Abilities skills;
 	boolean checkRetro = false;
 	String id;
 	String groupID;
@@ -77,8 +78,8 @@ public class ShipStats {
 	
 	
 	public void getShipStats(String id) {
-		this.id = id;
-		groupID = id.substring(0, id.length()-1);
+		this.id = id.trim();
+		groupID = this.id.substring(0, this.id.length()-1);
 		if(checkRetro) {
 			checkRetro();
 			getRetroStats();
@@ -91,6 +92,24 @@ public class ShipStats {
 		checkResearch();
 		importGuns();
 		
+	}
+	
+	public void printSkillTree() {
+		skills.printTree();
+	}
+	
+	public void addAbility(Abilities ability) {
+		if(ability != null)
+			skills = ability;
+	}
+	
+	public void printWeapons() {
+		for(Weapons w : Abilities.weaponsList) {
+			w.printWeapon(true);
+		}
+		for(Planes p : Abilities.planesList) {
+			p.printWeapons(true);
+		}
 	}
 	
 	public String getID() {
@@ -321,6 +340,7 @@ public class ShipStats {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		} 
 	}
 	

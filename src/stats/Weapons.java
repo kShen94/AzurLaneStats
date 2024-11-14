@@ -34,6 +34,7 @@ public class Weapons {
 	String target = "";
 	List<Planes> pList = new ArrayList<Planes>();
 
+
 	public Weapons(String id) {
 		weapon_id = id;
 		checkWeapon();
@@ -42,6 +43,7 @@ public class Weapons {
 	public Weapons() {
 		
 	}
+	
 	
 	public Weapons(String id,String target) {
 		this.target = target;
@@ -198,21 +200,51 @@ public class Weapons {
 	 * Gets bullet count for each unique bullet
 	 */
 	private void getBullets() {
-		int b;
+		int bulletid;
 		for(int i = 0; i < bulletArray.length();i++) {
-			b = bulletArray.getInt(i);
-			if(checkBulletDropFilter(b))
+			bulletid = bulletArray.getInt(i);
+			int barrageid = barrageArray.getInt(i);
+			if(checkBulletDropFilter(bulletid))
 				continue;
 			//use a map to track unique bullets
-			if(map.containsKey(b)) {
-				addBullet(b,i);
+			if(map.containsKey(bulletid)) {
+				addBulletToExisting(bulletid,barrageid);
 			}else {
 				//stores a stack of each unique bullet
-				mapValues.push(b);
-				map.put(b, createBullet(b,i));
+				mapValues.push(bulletid);
+				Bullets bullet = createBullet(bulletid,barrageid);
+				map.put(bulletid, bullet);
+				if(bullet.hasShrapnel()) 
+					handleShrapnel(bullet, bullet.bulletCount);
 			}
 		}
-		combineBullets();
+		if(!mapValues.isEmpty())
+			combineBullets();
+	}
+	
+	private void handleShrapnel(Bullets b, int count) {
+		List<Integer> sbullet = b.shrapnelBullet;
+		List<Integer> sbarrage = b.shrapnelBarrage;
+		List<Boolean> reaim = b.shrapnelReaim;
+		
+		for(int i = 0; i < sbullet.size();i++) {
+			
+			int bulletid = sbullet.get(i);
+			int barrageid = sbarrage.get(i);
+			if(checkBulletDropFilter(bulletid))
+				continue;
+			if(map.containsKey(bulletid)) {
+				addShrapnelBulletToExisting(bulletid,barrageid,count);
+			}else {
+				mapValues.push(bulletid);
+				Bullets shrapnel = createShrapnelBullet(bulletid,barrageid,count);
+				if(reaim.get(i))
+					shrapnel.prependNote("Reaim");
+				map.put(bulletid, shrapnel);
+				if(shrapnel.hasShrapnel())
+					handleShrapnel(shrapnel,shrapnel.getBulletCount());
+			}
+		}
 	}
 	
 	//Checks if diveFilter is [1,2], if so returns true
@@ -244,14 +276,15 @@ public class Weapons {
 			t=values.pop();
 			b = map.get(t);
 			//if L/M/H is non-unique, combine bullet counts
-			if(a.getLight()==b.getLight() &&  a.getMedium()==b.getMedium() && a.getHeavy()==b.getHeavy() && a.getBuffID()==b.getBuffID())
+			if(a.getLight()==b.getLight() &&  a.getMedium()==b.getMedium() && a.getHeavy()==b.getHeavy() && a.getNote().equals(b.getNote()))
 				a.addBullets(b.getBulletCount());
 			else {
 				temp.push(t);
 			}
 			if(values.isEmpty() && !temp.isEmpty()) {
-				values = temp;
+				values = (Stack<Integer>) temp.clone();
 				a = map.get(values.pop());
+				temp.clear();
 				result.push(a.getBulletID());
 			}
 		}
@@ -264,12 +297,21 @@ public class Weapons {
 	 * @param index - index of bullet and barrage arrays
 	 * @return
 	 */
-	private Bullets createBullet(int bulletId,int index) {
+	private Bullets createBullet(int bulletId,int barrageid) {
 		Bullets bullet = new Bullets(bulletId);
-		JSONObject barrage = barrageStats.getJSONObject(barrageArray.getInt(index)+"");
+		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
 		int primal = barrage.getInt("primal_repeat")+1;
 		int senior = barrage.getInt("senior_repeat")+1;
 		bullet.addBullets(primal*senior);
+		return bullet;
+	}
+	
+	private Bullets createShrapnelBullet(int bulletid, int barrageid, int bulletcount) {
+		Bullets bullet = new Bullets(bulletid);
+		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
+		int primal = barrage.getInt("primal_repeat")+1;
+		int senior = barrage.getInt("senior_repeat")+1;
+		bullet.addBullets(primal*senior*bulletcount);
 		return bullet;
 	}
 
@@ -278,13 +320,27 @@ public class Weapons {
 	 * @param b
 	 * @param index - index of bullet and barrage arrays
 	 */
-	private void addBullet(int b, int index) {
-		JSONObject barrage = barrageStats.getJSONObject(barrageArray.getInt(index)+"");
+	private void addBulletToExisting(int bulletid, int barrageid) {
+		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
 		int primal = barrage.getInt("primal_repeat")+1;
 		int senior = barrage.getInt("senior_repeat")+1;
-		Bullets bullet = map.get(b);
+		Bullets bullet = map.get(bulletid);
 		bullet.addBullets(primal*senior);
-		map.put(b, bullet);
+		map.put(bulletid, bullet);
+		if(bullet.hasShrapnel()) {
+			handleShrapnel(bullet, primal*senior);
+		}
+	}
+	
+	private void addShrapnelBulletToExisting(int bulletid, int barrageid,int bulletcount) {
+		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
+		int primal = barrage.getInt("primal_repeat")+1;
+		int senior = barrage.getInt("senior_repeat")+1;
+		Bullets bullet = map.get(bulletid);
+		bullet.addBullets(primal*senior*bulletcount);
+		map.put(bulletid, bullet);
+		if(bullet.shrapnel)
+			handleShrapnel(bullet,primal*senior*bulletcount);
 	}
 
 
@@ -383,54 +439,123 @@ public class Weapons {
 			buff = String.valueOf(buffid);
 		if(rant != 0)
 			proc = String.valueOf(rant);
-		
-		String note = createNote(b);
+		if(!target.isBlank())
+			b.note = addToNote(target,b.note);
 		System.out.println(weapon_id+"\t"+bulletId+"\t"+damage+"\t"+ammoType+"\t"+coeff/100+"\t"+attrRatio/100+"\t"+scaling+"\t"+
-				light+"\t"+med+"\t"+heavy+"\t"+ note+proc+"\t"+buff+"\t"+bulletCount);
+				light+"\t"+med+"\t"+heavy+"\t"+ b.note+"\t"+proc+"\t"+buff+"\t"+bulletCount);
 	}
 	
-	private String createNote(Bullets b) {
-		boolean comma = false;
-		String note = "";
-		if(!target.isBlank()) {
-			note = note + target;
-			comma=true;
-		}
-		if (b.ignoreShield == true) {
-			note = addComma(note,comma);
-			note = note + "Ignore shields";
-			comma=true;
-		}
-		if (b.pierce > 0) {
-			note = addComma(note,comma);
-			note = note + "pierce " + b.pierce;
-			comma=true;
-		}
-		
-		if(b.offsetX > 0 && b.offsetX==b.offsetZ) {
-			note = addComma(note,comma);
-			note = note + b.offsetX + " spread";
-			comma=true;
-		}
-		else if(b.offsetX > 0 && b.offsetZ > 0) {
-			note = addComma(note,comma);
-			note = note + b.offsetX+ " spreadX, "+ b.offsetZ + " spreadZ";
-			comma=true;
-		}
-		
-		if(b.splash > 0 && b.splash != 3) {
-			note = addComma(note,comma);
-			note = note + b.splash + " splash";
-			comma=true;
-		}
-		note = note + " \t";
+	public String addToNote(String s, String note) {
+		if(note.isBlank())
+			note = s;
+		else
+			note = s + ", " + note;
 		return note;
 	}
 	
-	private String addComma(String note, boolean comma) {
-		if(comma)
-			note = note + ", ";
-		return note;
+	
+	public String getWeapon_id() {
+		return weapon_id;
+	}
+
+	public void setWeapon_id(String weapon_id) {
+		this.weapon_id = weapon_id;
+	}
+
+	public JSONObject getWeapon() {
+		return weapon;
+	}
+
+	public void setWeapon(JSONObject weapon) {
+		this.weapon = weapon;
+	}
+
+	public List<Integer> getBullet_id() {
+		return bullet_id;
+	}
+
+	public void setBullet_id(List<Integer> bullet_id) {
+		this.bullet_id = bullet_id;
+	}
+
+	public List<Integer> getBulletCount() {
+		return bulletCount;
+	}
+
+	public void setBulletCount(List<Integer> bulletCount) {
+		this.bulletCount = bulletCount;
+	}
+
+	public int getDamage() {
+		return damage;
+	}
+
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
+
+	public double getCoeff() {
+		return coeff;
+	}
+
+	public void setCoeff(double coeff) {
+		this.coeff = coeff;
+	}
+
+	public int getAttr() {
+		return attr;
+	}
+
+	public void setAttr(int attr) {
+		this.attr = attr;
+	}
+
+	public double getAttrRatio() {
+		return attrRatio;
+	}
+
+	public void setAttrRatio(double attrRatio) {
+		this.attrRatio = attrRatio;
+	}
+
+	public String getScaling() {
+		return scaling;
+	}
+
+	public void setScaling(String scaling) {
+		this.scaling = scaling;
+	}
+
+	public JSONObject getBaseWeapon() {
+		return baseWeapon;
+	}
+
+	public void setBaseWeapon(JSONObject baseWeapon) {
+		this.baseWeapon = baseWeapon;
+	}
+
+	public int getPlaneCount() {
+		return planeCount;
+	}
+
+	public void setPlaneCount(int planeCount) {
+		this.planeCount = planeCount;
+	}
+
+	public Boolean getPlane() {
+		return plane;
+	}
+
+	public void setPlane(Boolean plane) {
+		this.plane = plane;
+	}
+
+	public String getTarget() {
+		return target;
+	}
+
+	public void setTarget(String target) {
+		this.target = target;
 	}
 	
 }

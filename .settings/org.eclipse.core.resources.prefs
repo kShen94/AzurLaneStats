@@ -1,4 +1,16 @@
 eclipse.preferences.version=1
+encoding//resources/buffCfg.json=UTF-8
+encoding//resources/ship_data_breakout.json=UTF-8
+encoding//resources/ship_data_statistics.json=UTF-8
+encoding//resources/ship_data_strengthen.json=UTF-8
+encoding//resources/ship_data_template.json=UTF-8
+encoding//resources/ship_data_trans.json=UTF-8
+encoding//resources/ship_strengthen_blueprint.json=UTF-8
+encoding//resources/skillCfg.json=UTF-8
+encoding//resources/transform_data_template.json=UTF-8
+encoding//resources/weapon_property.json=UTF-8
 encoding//src/stats/ShipIds.java=UTF-8
 encoding//src/stats/SkillTree.java=UTF-8
 encoding/<project>=UTF-8
+encoding/resources=UTF-8
+separateDerivedEncodings=true

@@ -5,11 +5,16 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
+import Utility.FileDownloader;
+import Utility.UpdateAugmentList;
+import Utility.UpdateShipIds;
+
 public class Main {
-	
 	ShipStats s = new ShipStats();
 	//data repo: https://github.com/AzurLaneTools/AzurLaneData
-	static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
+	//static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
+	//static String repoDir = "C:\\Users\\Kevin\\Documents\\GitHub\\al-json\\CN";
+	static String repoDir = "C:\\Users\\Kevin\\Documents\\GitHub\\AzurLaneData\\CN";
 	
 	static String help = "This is a tool made to assist with Azur Lane datamining, particularly barrage and weapon info \n\n"
 			+ "Usage: ALStats -s <shipName> [options] <args> \n"
@@ -20,30 +25,37 @@ public class Main {
 			+ "\t -l <level> --default 125 \n"
 			+ "\t -aff <affection> --default 100 \n"
 			+ "\t -retro <true/false> --default true,returns retrofit stats if applicable \n";
-	
+
+	static boolean augment;
 	//TODO add meta stats, fs skill upgrades, add functionality for rng skills
 	//copy jsons in every update
 	//UI
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		//operation mode
 		// w for weapon ids
 		// b for buffs		
 		
 		//ide usage, change to false when building
-		boolean manual = false;
+		boolean manual = true;
 		boolean printExcel = manual;
-		String shipName = "Huan Ch'ang";
-		int level = 120;
+		String shipName = "Shiratsuyu";
+		int level = 125;
 		int aff = 100;
 		String mode = "-s";
 		boolean retroFlag = true;
-		String buffID = "18380";
+		augment = true;
+		String buffID = "18730";
 		String weaponId = "324";
 		String shipId = "702074";
 		
 		if(manual == true ) {
 			//change to true to update files
-			copyFiles(true);
+			//copyFiles(true);
+			if(true) {
+			FileDownloader.updateFiles();
+			UpdateShipIds.updateShipIds();
+			}
 			run(mode,shipName,retroFlag,weaponId,buffID,shipId,level,aff,printExcel);
 		}
 		else if(args.length == 0) {
@@ -113,23 +125,10 @@ public class Main {
 			}
 		}
 		else if(mode.equals("-s")){
-			s = new ShipStats();
-			String id = ShipIds.getShipID(shipName);
-			s.setRetroTrue(retroFlag);
-			if(id != null) {
-				s.getShipStats(id);
-				s.printStats(level, aff);
-				id = s.getID();
-				new Abilities(Integer.parseInt(id));
-				for(Weapons w : Abilities.weaponsList) {
-					w.printWeapon(printExcel);
-				}
-				for(Planes p : Abilities.planesList) {
-					p.printWeapons(printExcel);
-				}
-			}else {
-				System.out.println("Check name or files");
-			}
+			s = new ShipBuilder(shipName,retroFlag,augment).getShip();
+			s.printStats(level, aff);
+			s.printSkillTree();
+			s.printWeapons();
 		}
 		else if(mode.equals("-id")) {
 			s = new ShipStats();
@@ -137,7 +136,8 @@ public class Main {
 			s.getShipStats(shipId);
 			s.printStats(level, aff);
 			String id = s.getID();
-			new Abilities(Integer.parseInt(id));
+			String groupid = id.substring(0, id.length()-1);
+			new Abilities(Integer.parseInt(id),groupid,augment);
 			for(Weapons w : Abilities.weaponsList) {
 				w.printWeapon(printExcel);
 			}
@@ -153,7 +153,7 @@ public class Main {
 	//Copy json files from repo directory
 	public static void copyFiles(boolean flag) {
 		if(flag) {
-			String src = System.getProperty("user.dir") + "\\src\\";
+			String src = System.getProperty("user.dir") + "\\resources\\";
 			List<String> sharecfgdata = Arrays.asList(
 					"aircraft_template.json",
 					"barrage_template.json",
@@ -161,7 +161,8 @@ public class Main {
 					"ship_data_breakout.json",
 					"ship_data_statistics.json",
 					"ship_data_template.json",
-					"weapon_property.json");
+					"weapon_property.json",
+					"spweapon_data_statistics.json");
 			List<String> sharecfg = Arrays.asList(
 					"ship_data_strengthen.json",
 					"ship_data_trans.json",

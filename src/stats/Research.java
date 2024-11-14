@@ -34,16 +34,21 @@ public enum Research {
 	//PR5
 	Brest("FFNF Brest", new double[] {0,0,10,307+614+921,0,0,0,12+23+35,0,5,0,0,0},"27"),
 	Plymouth("HMS Plymouth", new double[] {15,0,0,227+453+681,0,0,0,16+31+46,0,0,0,0,0},"23"),
-	PrinzRupprecht("KMS Prinz Rupprecht", new double[] {5,0,10,344+688+1032,0,0,0,15+29+45,0,0,0,0,0},"24"),
-	Harbin("PRAN Harbin", new double[] {0,10,0,152+305+457,0,0,0,19+38+58,0,0,0,0,0},"25"),
-	Chkalov("SN Chkalov", new double[] {0,0,5,269+539+809,0,0,0,15+30+44,0,0,0,0,0},"26"),
+	PrinzRupprecht("KMS Prinz Rupprecht", new double[] {5,0,10,344+688+1032,0,0,0,15+29+45,0,0,0,0,15},"24"),
+	Harbin("PRAN Harbin", new double[] {0,10,0,152+305+457,0,0,0,19+38+58,0,0,0,0,15},"25"),
+	Chkalov("SN Chkalov", new double[] {0,0,5,269+539+809,0,0,0,15+30+44,0,0,0,0,15},"26"),
 	//PR6
 	Kearsarge("USS Kearsarge", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"28"),
-	Shimanto("IJN Shimanto", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"29"),
-	FelixSchultz("KMS Felix Schultz", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"30"),
+	Shimanto("IJN Shimanto", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,15},"29"),
+	FelixSchultz("KMS Felix Schultz", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,15},"30"),
 	Hindenburg("KMS Hindenburg", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"31"),
-	Flandre("MNF Flandre", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,0},"32")
-	
+	Flandre("MNF Flandre", new double[] {10,20,0,383+766+1195,0,0,0,15+33+31,0,0,0,0,15},"32"),
+	//PR7
+	Halford("USS Halford", new double[] {10,0,0,100+201+301,0,0,0,8+16+24,0,0,0,0,0},"33"),
+	Daisen("IJN Daisen", new double[] {5+5,0,10,337+674+1010,0,0,0,12+25+35,0,0,0,0,0},"34"),
+	Napoli("RN Napoli", new double[] {10,0,0,298+597+894,0,0,0,13+23+36,0,0,0,0,0},"35"),
+	Nakhimov("SN Admiral Nakhimov", new double[] {0,10,10,393+787+1180,0,0,0,14+27+41,0,0,0,0,0},"36"),
+	Bayard("FFNF Bayard", new double[] {0,10,0,202+405+607,0,0,0,17+35+51,0,0,0,0,0},"37")
 	;
 	/** 0 - equipment_proficiency_1
 	 *  1 - equipment_proficiency_2
