@@ -11,10 +11,6 @@ import Utility.UpdateShipIds;
 
 public class Main {
 	ShipStats s = new ShipStats();
-	//data repo: https://github.com/AzurLaneTools/AzurLaneData
-	//static String repoDir = "[Data Repo directory]\\GitHub\\AzurLaneData\\CN";
-	//static String repoDir = "C:\\Users\\Kevin\\Documents\\GitHub\\al-json\\CN";
-	static String repoDir = "C:\\Users\\Kevin\\Documents\\GitHub\\AzurLaneData\\CN";
 	
 	static String help = "This is a tool made to assist with Azur Lane datamining, particularly barrage and weapon info \n\n"
 			+ "Usage: ALStats -s <shipName> [options] <args> \n"
@@ -38,8 +34,9 @@ public class Main {
 		
 		//ide usage, change to false when building
 		boolean manual = true;
+		boolean update = false;
 		boolean printExcel = manual;
-		String shipName = "Shiratsuyu";
+		String shipName = "pittsburgh";
 		int level = 125;
 		int aff = 100;
 		String mode = "-s";
@@ -49,10 +46,10 @@ public class Main {
 		String weaponId = "324";
 		String shipId = "702074";
 		
-		if(manual == true ) {
+		if(manual) {
 			//change to true to update files
 			//copyFiles(true);
-			if(true) {
+			if(update) {
 			FileDownloader.updateFiles();
 			UpdateShipIds.updateShipIds();
 			}
@@ -150,55 +147,4 @@ public class Main {
 		}
 	}
 	
-	//Copy json files from repo directory
-	public static void copyFiles(boolean flag) {
-		if(flag) {
-			String src = System.getProperty("user.dir") + "\\resources\\";
-			List<String> sharecfgdata = Arrays.asList(
-					"aircraft_template.json",
-					"barrage_template.json",
-					"bullet_template.json",
-					"ship_data_breakout.json",
-					"ship_data_statistics.json",
-					"ship_data_template.json",
-					"weapon_property.json",
-					"spweapon_data_statistics.json");
-			List<String> sharecfg = Arrays.asList(
-					"ship_data_strengthen.json",
-					"ship_data_trans.json",
-					"transform_data_template.json",
-					"ship_strengthen_blueprint.json",
-					"ship_meta_repair.json",
-					"ship_meta_repair_effect.json",
-					"ship_strengthen_meta.json");
-			
-			String skill = "skillCfg.json";
-			String buff = "buffCfg.json";
-			File source;
-			File dest;
-			
-			try {
-					source = new File(repoDir+"\\"+skill);
-					dest = new File(src + "\\"+skill);
-					FileUtils.copyFile(source,dest);
-					source = new File(repoDir+"\\"+buff);
-					dest = new File(src + "\\"+buff);
-					FileUtils.copyFile(source,dest);
-				for(String file: sharecfgdata) {
-					source = new File(repoDir +"\\sharecfgdata\\"+file);
-					dest = new File(src +file);
-					FileUtils.copyFile(source,dest);
-				}
-				for(String file: sharecfg) {
-					source = new File(repoDir +"\\sharecfg\\"+file);
-					dest = new File(src +file);
-					FileUtils.copyFile(source,dest);
-				}
-				
-			}catch (Exception e) {
-				e.printStackTrace();
-				//TODO insert missing files error
-			}
-		}
-	}
 }

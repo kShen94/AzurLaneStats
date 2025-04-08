@@ -17,9 +17,10 @@ public class FileDownloader {
 	private static final String BINARY_URL = "https://raw.githubusercontent.com/"+REPO_DIR+"/refs/heads/main/CN/";
 	private static final String SHARECFGDATA_BINARY_URL = "https://raw.githubusercontent.com/"+REPO_DIR+"/refs/heads/main/CN/sharecfgdata/";
 	private static final String SHARECFG_BINARY_URL = "https://raw.githubusercontent.com/"+REPO_DIR+"/refs/heads/main/CN/ShareCfg/";
-	private static final String[] FILE_LIST = {
-			"skillCfg.json",
-			"buffCfg.json"
+	private static final String GAMECFG_BINARY_URL = "https://raw.githubusercontent.com/"+REPO_DIR+"/refs/heads/main/CN/GameCfg/";
+	private static final String[] GAMECFG_BINARY_FILE_LIST = {
+			"skill.json",
+			"buff.json"
 	};
 	private static final String[] SHARECFGDATA_FILE_LIST = {
 			"ship_data_statistics.json",
@@ -65,9 +66,14 @@ public class FileDownloader {
 					System.out.println("Skipping "+file);
 				}
 			}
-			for(String file:FILE_LIST) {
-				if (isUpdateAvailable(BINARY_URL+file)) {
-					downloadFile(BINARY_URL+file, file);
+			for(String file:GAMECFG_BINARY_FILE_LIST) {
+				String fileName = "";
+				if (isUpdateAvailable(GAMECFG_BINARY_URL+file)) {
+					if(file.equals("skill.json"))
+						fileName = "skillCfg.json";
+					else if(file.equals("buff.json"))
+						fileName= "buffCfg.json";
+					downloadFile(GAMECFG_BINARY_URL+file, fileName);
 				}
 				else {
 					System.out.println("Skipping "+file);
@@ -105,6 +111,7 @@ public class FileDownloader {
 					pair = line.split(",");
 					modifiedMap.put(pair[0],pair[1]);
 				}
+				br.close();
 			}
 			catch (Exception e) {
 				e.printStackTrace();

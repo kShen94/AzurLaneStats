@@ -39,19 +39,19 @@ public class Weapons {
 		weapon_id = id;
 		checkWeapon();
 	}
-	
+
 	public Weapons() {
-		
+
 	}
-	
-	
+
+
 	public Weapons(String id,String target) {
 		this.target = target;
 		weapon_id = id;
 		correctTarget();
 		checkWeapon();
 	}
-	
+
 	public Weapons(String id,String target, boolean plane) {
 		this.target = target;
 		weapon_id = id;
@@ -105,7 +105,7 @@ public class Weapons {
 			planeBarrageArray = baseWeapon.getJSONArray("barrage_ID");
 		}
 		JSONArray planeBulletArray = weapon.optJSONArray("bullet_ID");
-		
+
 		if(planeBulletArray!=null && !planeBulletArray.isEmpty())
 			createPlane(id,planeBulletArray,planeBarrageArray);
 		else
@@ -121,9 +121,15 @@ public class Weapons {
 			if(plane == null) {
 				plane = planeStats.getJSONObject(weapon_id);
 			}
-			JSONArray load = plane.getJSONArray("weapon_ID");
-			for(int j = 0; j < load.length();j++) {
-				loadout.add(load.getInt(j)+"");
+			try {
+				JSONArray load = plane.getJSONArray("weapon_ID");
+
+				for(int j = 0; j < load.length();j++) {
+					loadout.add(load.getInt(j)+"");
+				}
+			}catch(Exception e) {
+				System.out.println("Failed on plane_id: " + id);
+				e.printStackTrace();
 			}
 			Abilities.addPlane(new Planes(id,loadout,planes));
 		}
@@ -221,22 +227,23 @@ public class Weapons {
 		if(!mapValues.isEmpty())
 			combineBullets();
 	}
-	
+
 	private void handleShrapnel(Bullets b, int count) {
 		List<Integer> sbullet = b.shrapnelBullet;
 		List<Integer> sbarrage = b.shrapnelBarrage;
 		List<Boolean> reaim = b.shrapnelReaim;
-		
+
 		for(int i = 0; i < sbullet.size();i++) {
-			
+			boolean fakeBullet = false;
 			int bulletid = sbullet.get(i);
 			int barrageid = sbarrage.get(i);
 			if(checkBulletDropFilter(bulletid))
-				continue;
-			if(map.containsKey(bulletid)) {
+				fakeBullet=true;
+			if(map.containsKey(bulletid) && !fakeBullet) {
 				addShrapnelBulletToExisting(bulletid,barrageid,count);
 			}else {
-				mapValues.push(bulletid);
+				if(!fakeBullet)
+					mapValues.push(bulletid);
 				Bullets shrapnel = createShrapnelBullet(bulletid,barrageid,count);
 				if(reaim.get(i))
 					shrapnel.prependNote("Reaim");
@@ -246,7 +253,7 @@ public class Weapons {
 			}
 		}
 	}
-	
+
 	//Checks if diveFilter is [1,2], if so returns true
 	private boolean checkBulletDropFilter(int bulletId) {
 		JSONObject bullet = bulletStats.getJSONObject(bulletId+"");
@@ -255,8 +262,7 @@ public class Weapons {
 			JSONArray diveFilter = ((JSONObject) extra_param).getJSONArray("diveFilter");
 			if(diveFilter.length()==2)
 				if(diveFilter.getInt(0)==1 && diveFilter.getInt(1) == 2)
-					return true;
-		}
+					return true;}
 		return false;
 	}
 
@@ -305,7 +311,7 @@ public class Weapons {
 		bullet.addBullets(primal*senior);
 		return bullet;
 	}
-	
+
 	private Bullets createShrapnelBullet(int bulletid, int barrageid, int bulletcount) {
 		Bullets bullet = new Bullets(bulletid);
 		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
@@ -331,7 +337,7 @@ public class Weapons {
 			handleShrapnel(bullet, primal*senior);
 		}
 	}
-	
+
 	private void addShrapnelBulletToExisting(int bulletid, int barrageid,int bulletcount) {
 		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
 		int primal = barrage.getInt("primal_repeat")+1;
@@ -341,6 +347,7 @@ public class Weapons {
 		map.put(bulletid, bullet);
 		if(bullet.shrapnel)
 			handleShrapnel(bullet,primal*senior*bulletcount);
+
 	}
 
 
@@ -381,7 +388,7 @@ public class Weapons {
 	public void printWeaponBulletMultiplier(int x, String planeID, boolean printExcel) {
 		while(!mapValues.isEmpty()) {
 			Bullets b = map.get(mapValues.pop());
-			
+
 			System.out.println("-----------------------------------------------");
 			System.out.println("WeaponID: "+ weapon_id);
 			System.out.println( "BulletID: "+ b.bulletID);
@@ -411,7 +418,7 @@ public class Weapons {
 				printExcel(planeID,b,x);
 		}
 	}
-	
+
 	protected void printExcel(String planeID, Bullets b, int planeCount) {
 		String bulletId = String.valueOf(b.bulletID);
 		int bulletCount = b.bulletCount;
@@ -427,7 +434,7 @@ public class Weapons {
 		int velocity = b.velocity;
 		int antisub = b.antisub;
 		int rant = b.rant/100;
-		
+
 		String buff = "";
 		String proc = "";
 		System.out.println("excel : --------------");
@@ -444,7 +451,7 @@ public class Weapons {
 		System.out.println(weapon_id+"\t"+bulletId+"\t"+damage+"\t"+ammoType+"\t"+coeff/100+"\t"+attrRatio/100+"\t"+scaling+"\t"+
 				light+"\t"+med+"\t"+heavy+"\t"+ b.note+"\t"+proc+"\t"+buff+"\t"+bulletCount);
 	}
-	
+
 	public String addToNote(String s, String note) {
 		if(note.isBlank())
 			note = s;
@@ -452,8 +459,8 @@ public class Weapons {
 			note = s + ", " + note;
 		return note;
 	}
-	
-	
+
+
 	public String getWeapon_id() {
 		return weapon_id;
 	}
@@ -557,5 +564,5 @@ public class Weapons {
 	public void setTarget(String target) {
 		this.target = target;
 	}
-	
+
 }

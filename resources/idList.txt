@@ -1,4 +1,5 @@
 Admiral Hipper µ, 40307
+Admiral Hipper.META,970305
 Akagi µ, 30710
 Akagi-chan, 30709
 Akizuki Ritsuko,1070005
@@ -7,6 +8,7 @@ Algérie.META,970302
 Amagi (CV), 30715
 Amagi-chan, 30407
 Amami Haruka,1070001
+Andrea Doria.META,970508
 Arizona.META,970503
 Ark Royal.META,970702
 Asuka ,1100001
@@ -15,8 +17,11 @@ BILI 22,1020001
 BILI 33,1020002
 Baltimore µ, 10325
 Boise μ, 10232
+Bolzano.META,970306
 Béarn.META,970704
+Chang Feng,50108
 Chen Hai,50601
+Chien Wu,50301
 Clevelad, 10220
 Cleveland µ, 10224
 Dido μ, 20228
@@ -46,12 +51,14 @@ Fei Yuen ,50107
 Foch.META,970303
 Formidable μ, 20714
 Fortune.META,970102
+Fu Po,50109
 Fubuki,1100005
 Fumiruiru,1030006
 Fuso.META,970501
 Futami Ami,1070006
 Futami Mami,1070007
 Gascogne µ, 900203
+Giulio Cesare.META,970507
 Gneisenau.META,970401
 HDN Black Heart,1010006
 HDN Blanc,1010003
@@ -172,6 +179,7 @@ HMS Warspite,20502
 HMS York,20307
 Hai Chi,50208
 Hai Tien,50207
+Hai Yung,50210
 Hass ,1080003
 Hatakaze.META,970103
 Helena.META,970201
@@ -182,6 +190,7 @@ Hiryu.META,970701
 Hiyō.META,970601
 Homura,1100003
 Honoka,1060002
+Hornet.META,970706
 Hu Pen,50106
 Huan Ch'ang,50401
 Hunter.META,970101
@@ -342,16 +351,19 @@ KMS Admiral Graf Spee,40305
 KMS Admiral Hipper,40301
 KMS Alvitr,40406
 KMS August von Parseval,49906
+KMS Bernd von Arnim,40111
 KMS Bismarck Zwei,40505
 KMS Bismarck,40501
 KMS Blücher,40302
 KMS Brünhilde,40405
 KMS Deutschland,40304
+KMS Duisburg,40211
 KMS Elbe,40602
 KMS Felix Schultz,49908
 KMS Friedrich Carl,40314
 KMS Friedrich Eckoldt,40116
 KMS Friedrich der Grosse,49902
+KMS Fritz Rumey,40704
 KMS Georg Thiele,40102
 KMS Gneisenau,40402
 KMS Graf Zeppelin,40701
@@ -395,6 +407,7 @@ KMS U-96,40809
 KMS Ulrich von Hutten,40503
 KMS Weser,40601
 KMS Wilhelm Heidkamp,40121
+KMS Wolfgang Zenker,40109
 KMS Z23,40123
 KMS Z24,40124
 KMS Z25,40125
@@ -405,6 +418,7 @@ KMS Z36,40136
 KMS Z43,40143
 KMS Z46,40146
 KMS Z47,40147
+KMS Z52,40152
 KMS Ägir,49905
 Kala Ideas,1090006
 Kasumi,1060003
@@ -418,8 +432,11 @@ KizunaAI·Elegant,1040002
 KizunaAI·SuperGamer,1040004
 Klaudia Valentz,1090002
 Kongou μ, 30408
+Konjiki no Yami,1110004
+Kotegawa Yui,1110006
 Kuon,1030001
 La Galissonnière.META,970204
+Lala Satalin Deviluke,1110001
 Le Malin µ, 90112
 Le Téméraire μ, 80109
 Li'l Sandy, 10221
@@ -476,6 +493,7 @@ Minase Iori,1070003
 Minato Aqua ,1050003
 Misaki,1060004
 Miura Azusa,1070004
+Momo Belia Deviluke ,1110003
 Monica,1060007
 Mujina ,1080007
 Murasaki Shion ,1050006
@@ -484,8 +502,10 @@ Nagato.META,970506
 Nagisa,1060005
 Nakiri Ayame ,1050005
 Namiko,1080004
+Nana Asta Deviluke,1110002
 Natsuiro Matsuri ,1050004
 Nekone,1030002
+Nevada.META,970509
 Nidaime,1080008
 Noshiro μ, 30224
 Nyotengu,1060006
@@ -503,11 +523,13 @@ RN Alfredo Oriani,60108
 RN Andrea Doria,60507
 RN Aquila,60701
 RN Attilio Regolo,60110
+RN Bartolomeo Colleoni,60203
 RN Bolzano,60305
 RN Carabiniere,60102
 RN Conte di Cavour,60505
 RN Duca degli Abruzzi,60201
 RN Emanuele Pessagno,60109
+RN Giosue Carducci,60111
 RN Giulio Cesare,60506
 RN Giuseppe Garibaldi,60202
 RN Gorizia,60306
@@ -516,11 +538,13 @@ RN Leonardo da Vinci,60802
 RN Libeccio,60105
 RN Littorio,60502
 RN Maestrale,60104
+RN Maggiore Baracca,60803
 RN Marco Polo,69901
 RN Napoli,69902
 RN Nicoloso da Recco,60106
 RN Pola,60303
 RN Pompeo Magno,60107
+RN Raffaello,60508
 RN Roma,60503
 RN Torricelli,60801
 RN Trento,60301
@@ -576,6 +600,7 @@ SN Tallinn,70301
 SN Tashkent,70104
 SN Volga,70701
 SN Voroshilov,70207
+Sairenji Haruna,1110005
 Saraana,1030005
 Scharnhorst.META,970402
 Serri Glaus,1090005
@@ -585,6 +610,7 @@ Shinjō Akane ,1080002
 Shirakami Fubuki ,1050001
 Sōryū.META,970703
 Taihou µ, 30711
+Taihō.META,970705
 Takarada Rikka ,1080001
 Tamaki,1060009
 Tashkent µ, 70105
@@ -645,6 +671,7 @@ USS Fargo,10233
 USS Flasher,10808
 USS Fletcher,10109
 USS Foote,10114
+USS Franklin,10713
 USS Georgia,19902
 USS Gridley,10105
 USS Guam,11802
@@ -685,6 +712,7 @@ USS Massachusetts,10519
 USS Maury,10108
 USS McCall,10107
 USS Memphis,10216
+USS Miller,10153
 USS Minneapolis,10313
 USS Montpelier,10214
 USS Morrison,10147
@@ -716,6 +744,7 @@ USS San Diego,10208
 USS San Francisco,10314
 USS San Jacinto,10730
 USS San Juan,10222
+USS Santa Fe,10234
 USS Saratoga,10703
 USS Seattle,19901
 USS Shangri-La,10738
