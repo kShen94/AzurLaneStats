@@ -33,6 +33,7 @@ public class Weapons {
 	Boolean plane = false;
 	String target = "";
 	List<Planes> pList = new ArrayList<Planes>();
+	String aircraftID;
 
 
 	public Weapons(String id) {
@@ -55,6 +56,14 @@ public class Weapons {
 	public Weapons(String id,String target, boolean plane) {
 		this.target = target;
 		weapon_id = id;
+		correctTarget();
+		checkWeapon();
+	}
+	
+	public Weapons(String id, String target, boolean plane, String aircraft) {
+		this.target = target;
+		weapon_id = id;
+		aircraftID = aircraft;
 		correctTarget();
 		checkWeapon();
 	}
@@ -89,10 +98,16 @@ public class Weapons {
 			baseWeapon = weaponStats.getJSONObject(weapon.getInt("base")+"");
 		else
 			baseWeapon = weapon;
+		if(aircraftID != null)
+			getPointAirStrikePlane(aircraftID, 1);
 		//type 10 and 11
-		if(baseWeapon.getInt("type")== 10 || baseWeapon.getInt("type")== 11 ) {
+		else if(baseWeapon.getInt("type")== 10 || baseWeapon.getInt("type")== 11 ) {
 			getPlane(weapon_id);
-		}else {
+		}
+		else if(baseWeapon.getInt("type")== 24) {
+			getLaserGun();
+		}
+		else {
 			getGun();
 
 		}
@@ -111,6 +126,11 @@ public class Weapons {
 		else
 			createPlane(id,planeBarrageArray);
 	}
+	
+	private void getPointAirStrikePlane(String id, int planeCount) {
+		createPlane(id,planeCount);
+	}
+		
 
 	private void createPlane(String id,JSONArray planeBulletArray,JSONArray planeBarrageArray) {
 		for(int i = 0; i < planeBulletArray.length();i++) {
@@ -138,6 +158,20 @@ public class Weapons {
 		LinkedList<String> loadout = new LinkedList<String>();
 		JSONObject barrage = barrageStats.getJSONObject(planeBarrageArray.getInt(0)+"");
 		int planes = (barrage.getInt("primal_repeat")+1)*(barrage.getInt("senior_repeat")+1);
+		JSONObject plane = planeStats.optJSONObject(id);
+		if(plane == null) {
+			plane = planeStats.getJSONObject(weapon_id);
+		}
+		JSONArray load = plane.getJSONArray("weapon_ID");
+		for(int j = 0; j < load.length();j++) {
+			loadout.add(load.getInt(j)+"");
+		}
+		Abilities.addPlane(new Planes(id,loadout,planes));
+	}
+	
+	private void createPlane(String id, int planeCount) {
+		LinkedList<String> loadout = new LinkedList<String>();
+		int planes = planeCount;
 		JSONObject plane = planeStats.optJSONObject(id);
 		if(plane == null) {
 			plane = planeStats.getJSONObject(weapon_id);
@@ -176,6 +210,29 @@ public class Weapons {
 		else
 			barrageArray = baseWeapon.getJSONArray("barrage_ID");
 		getBullets();
+	}
+	
+	private void getLaserGun() {
+		if(weapon.has("damage"))
+			damage = weapon.getInt("damage");
+		else
+			damage = baseWeapon.getInt("damage");
+		if(weapon.has("corrected"))
+			coeff = weapon.getDouble("corrected");
+		else
+			coeff = baseWeapon.getDouble("corrected");
+		attr = baseWeapon.getInt("attack_attribute");
+		attrRatio = baseWeapon.getDouble("attack_attribute_ratio");
+		getScaling(attr);
+		if(weapon.has("bullet_ID")) 
+			bulletArray = weapon.getJSONArray("bullet_ID");
+		else
+			bulletArray = baseWeapon.getJSONArray("bullet_ID");
+		if(weapon.has("barrage_ID"))
+			barrageArray = weapon.getJSONArray("barrage_ID");
+		else
+			barrageArray = baseWeapon.getJSONArray("barrage_ID");
+		getLaserBullets();
 	}
 
 	/**
@@ -227,6 +284,29 @@ public class Weapons {
 		if(!mapValues.isEmpty())
 			combineBullets();
 	}
+	
+	private void getLaserBullets() {
+		int bulletid;
+		for(int i = 0; i < bulletArray.length();i++) {
+			bulletid = bulletArray.getInt(i);
+			int barrageid = barrageArray.getInt(i);
+			if(checkBulletDropFilter(bulletid))
+				continue;
+			//use a map to track unique bullets
+			if(map.containsKey(bulletid)) {
+				addLaserBulletToExisting(bulletid,barrageid);
+			}else {
+				//stores a stack of each unique bullet
+				mapValues.push(bulletid);
+				Bullets bullet = createLaserBullet(bulletid,barrageid);
+				map.put(bulletid, bullet);
+				if(bullet.hasShrapnel()) 
+					handleShrapnel(bullet, bullet.bulletCount);
+			}
+		}
+		if(!mapValues.isEmpty())
+			combineBullets();
+	}
 
 	private void handleShrapnel(Bullets b, int count) {
 		List<Integer> sbullet = b.shrapnelBullet;
@@ -256,6 +336,8 @@ public class Weapons {
 
 	//Checks if diveFilter is [1,2], if so returns true
 	private boolean checkBulletDropFilter(int bulletId) {
+		if(bulletId == 1)
+			return false;
 		JSONObject bullet = bulletStats.getJSONObject(bulletId+"");
 		Object extra_param = bullet.get("extra_param");
 		if(extra_param instanceof JSONObject && ((JSONObject) extra_param).has("diveFilter")) {
@@ -296,6 +378,7 @@ public class Weapons {
 		}
 		mapValues = result;
 	}
+	
 
 	/**
 	 * Creates new bullet object and adds bullet count
@@ -303,12 +386,25 @@ public class Weapons {
 	 * @param index - index of bullet and barrage arrays
 	 * @return
 	 */
-	private Bullets createBullet(int bulletId,int barrageid) {
+	private Bullets createBullet(int bulletId,int barrageId) {
 		Bullets bullet = new Bullets(bulletId);
-		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
+		JSONObject barrage = barrageStats.getJSONObject(barrageId+"");
 		int primal = barrage.getInt("primal_repeat")+1;
 		int senior = barrage.getInt("senior_repeat")+1;
 		bullet.addBullets(primal*senior);
+		return bullet;
+	}
+	
+	private Bullets createLaserBullet(int bulletId, int barrageId) {
+		Bullets bullet = new Bullets(bulletId);
+		JSONObject barrage = barrageStats.getJSONObject(barrageId+"");
+		double delay = barrage.getDouble("delay");
+		double first_delay = barrage.getDouble("first_delay");
+		double senior_delay = barrage.getDouble("senior_delay");
+		double delta_delay = barrage.getDouble("delta_delay");
+		int count = (int)((delay-first_delay-senior_delay)/delta_delay);
+		bullet.prependNote("laser: " + (delay-first_delay-senior_delay)+"s duration, "+ (1/delta_delay)+ " ticks/s");
+		bullet.addBullets(count);
 		return bullet;
 	}
 
@@ -335,6 +431,21 @@ public class Weapons {
 		map.put(bulletid, bullet);
 		if(bullet.hasShrapnel()) {
 			handleShrapnel(bullet, primal*senior);
+		}
+	}
+	
+	private void addLaserBulletToExisting(int bulletid, int barrageid) {
+		JSONObject barrage = barrageStats.getJSONObject(barrageid+"");
+		double delay = barrage.getDouble("delay");
+		double first_delay = barrage.getDouble("first_delay");
+		double senior_delay = barrage.getDouble("senior_delay");
+		double delta_delay = barrage.getDouble("delta_delay");
+		int count = (int)((delay-first_delay-senior_delay)/delta_delay);
+		Bullets bullet = map.get(bulletid);
+		bullet.addBullets(count);
+		map.put(bulletid, bullet);
+		if(bullet.hasShrapnel()) {
+			handleShrapnel(bullet,count);
 		}
 	}
 

@@ -32849,6 +32849,81 @@
       52247
     ]
   },
+  "54017": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.84,
+          -1.25,
+          0
+        ],
+        [
+          0.77,
+          1.48,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 162,
+    "dodge": 0.303,
+    "dodge_limit": 12,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1829,
+    "icon": "f8f",
+    "id": 54017,
+    "max_hp": 48,
+    "model_ID": "f8f",
+    "name": "F8F熊猫定点轰炸测试",
+    "nationality": 1,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": -1,
+    "speed": 50,
+    "type": 1,
+    "weapon_ID": [
+      54018
+    ]
+  },
   "61010": {
     "ACC_growth": 0,
     "AP_growth": 2000,
@@ -33826,6 +33901,79 @@
     "spawn_brownian": 1,
     "speed": 50,
     "type": 3,
+    "weapon_ID": []
+  },
+  "61033": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 120,
+    "dodge": 3.51,
+    "dodge_limit": 1,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1438,
+    "icon": "vbwa",
+    "id": 61033,
+    "max_hp": 35,
+    "model_ID": "vbwa",
+    "name": "埃佛森技能侦察机",
+    "nationality": 11,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 46,
+    "type": 1,
     "weapon_ID": []
   },
   "62141": {
@@ -63173,6 +63321,151 @@
       50027
     ]
   },
+  "88020": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 51,
+    "dodge": 0.354,
+    "dodge_limit": 8.5,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.51,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1210,
+    "icon": "LGL32",
+    "id": 88020,
+    "max_hp": 31,
+    "model_ID": "LGL32",
+    "name": "LGL.32",
+    "nationality": 8,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 48,
+    "type": 1,
+    "weapon_ID": [
+      50040
+    ]
+  },
+  "88021": {
+    "base": 88020,
+    "hp_growth": 1391,
+    "id": 88021,
+    "max_hp": 36,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50041
+    ]
+  },
+  "88022": {
+    "base": 88020,
+    "hp_growth": 1572,
+    "id": 88022,
+    "max_hp": 41,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50042
+    ]
+  },
+  "88023": {
+    "base": 88020,
+    "hp_growth": 1754,
+    "id": 88023,
+    "max_hp": 46,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50043
+    ]
+  },
+  "88024": {
+    "base": 88020,
+    "hp_growth": 1935,
+    "id": 88024,
+    "max_hp": 50,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50044
+    ]
+  },
+  "88025": {
+    "base": 88020,
+    "hp_growth": 2117,
+    "id": 88025,
+    "max_hp": 55,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50045
+    ]
+  },
+  "88026": {
+    "base": 88020,
+    "hp_growth": 2298,
+    "id": 88026,
+    "max_hp": 60,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50046
+    ]
+  },
+  "88027": {
+    "base": 88020,
+    "hp_growth": 2480,
+    "id": 88027,
+    "max_hp": 64,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50047
+    ]
+  },
   "90820": {
     "ACC_growth": 0,
     "AP_growth": 2000,
@@ -64219,6 +64512,931 @@
       50193,
       50493,
       51613
+    ]
+  },
+  "91300": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 286,
+    "dodge": 1.16,
+    "dodge_limit": 3.5,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.52,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1338,
+    "icon": "PL7",
+    "id": 91300,
+    "max_hp": 35,
+    "model_ID": "PL7",
+    "name": "PL.10",
+    "nationality": 8,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 38,
+    "type": 2,
+    "weapon_ID": [
+      50020,
+      51560
+    ]
+  },
+  "91301": {
+    "base": 91300,
+    "hp_growth": 1538,
+    "id": 91301,
+    "max_hp": 40,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50021,
+      51561
+    ]
+  },
+  "91302": {
+    "base": 91300,
+    "hp_growth": 1739,
+    "id": 91302,
+    "max_hp": 45,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50022,
+      51562
+    ]
+  },
+  "91303": {
+    "base": 91300,
+    "hp_growth": 1940,
+    "id": 91303,
+    "max_hp": 50,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50023,
+      51563
+    ]
+  },
+  "91304": {
+    "base": 91300,
+    "hp_growth": 2140,
+    "id": 91304,
+    "max_hp": 56,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50024,
+      51564
+    ]
+  },
+  "91305": {
+    "base": 91300,
+    "hp_growth": 2341,
+    "id": 91305,
+    "max_hp": 61,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50025,
+      51565
+    ]
+  },
+  "91306": {
+    "base": 91300,
+    "hp_growth": 2541,
+    "id": 91306,
+    "max_hp": 66,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50026,
+      51566
+    ]
+  },
+  "91307": {
+    "base": 91300,
+    "hp_growth": 2742,
+    "id": 91307,
+    "max_hp": 71,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50027,
+      51567
+    ]
+  },
+  "91320": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 180,
+    "dodge": 3.15,
+    "dodge_limit": 6,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.44,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1549,
+    "icon": "v156f3",
+    "id": 91320,
+    "max_hp": 40,
+    "model_ID": "v156f3",
+    "name": "V-156-F",
+    "nationality": 8,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 45,
+    "type": 3,
+    "weapon_ID": [
+      50260,
+      52060
+    ]
+  },
+  "91321": {
+    "base": 91320,
+    "hp_growth": 1781,
+    "id": 91321,
+    "max_hp": 46,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50261,
+      52061
+    ]
+  },
+  "91322": {
+    "base": 91320,
+    "hp_growth": 2013,
+    "id": 91322,
+    "max_hp": 52,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50262,
+      52062
+    ]
+  },
+  "91323": {
+    "base": 91320,
+    "hp_growth": 2246,
+    "id": 91323,
+    "max_hp": 58,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50263,
+      52063
+    ]
+  },
+  "91324": {
+    "base": 91320,
+    "hp_growth": 2478,
+    "id": 91324,
+    "max_hp": 64,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50264,
+      52064
+    ]
+  },
+  "91325": {
+    "base": 91320,
+    "hp_growth": 2710,
+    "id": 91325,
+    "max_hp": 70,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50265,
+      52065
+    ]
+  },
+  "91326": {
+    "base": 91320,
+    "hp_growth": 2943,
+    "id": 91326,
+    "max_hp": 77,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50266,
+      52066
+    ]
+  },
+  "91327": {
+    "base": 91320,
+    "hp_growth": 3175,
+    "id": 91327,
+    "max_hp": 83,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50267,
+      52067
+    ]
+  },
+  "91328": {
+    "base": 91320,
+    "hp_growth": 3407,
+    "id": 91328,
+    "max_hp": 89,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50268,
+      52068
+    ]
+  },
+  "91329": {
+    "base": 91320,
+    "hp_growth": 3640,
+    "id": 91329,
+    "max_hp": 95,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50269,
+      52069
+    ]
+  },
+  "91330": {
+    "base": 91320,
+    "hp_growth": 3872,
+    "id": 91330,
+    "max_hp": 101,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50270,
+      52070
+    ]
+  },
+  "91331": {
+    "base": 91320,
+    "hp_growth": 4104,
+    "id": 91331,
+    "max_hp": 107,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50271,
+      52071
+    ]
+  },
+  "91340": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          1.26,
+          -1.13,
+          0
+        ],
+        [
+          1.35,
+          1.18,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 210,
+    "dodge": 3.57,
+    "dodge_limit": 3.5,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.44,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1690,
+    "icon": "ln401e",
+    "id": 91340,
+    "max_hp": 44,
+    "model_ID": "ln401e",
+    "name": "LN.401",
+    "nationality": 8,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 47,
+    "type": 3,
+    "weapon_ID": [
+      50260,
+      50480,
+      53420
+    ]
+  },
+  "91341": {
+    "base": 91340,
+    "hp_growth": 1943,
+    "id": 91341,
+    "max_hp": 51,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50261,
+      50481,
+      53421
+    ]
+  },
+  "91342": {
+    "base": 91340,
+    "hp_growth": 2196,
+    "id": 91342,
+    "max_hp": 57,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50262,
+      50482,
+      53422
+    ]
+  },
+  "91343": {
+    "base": 91340,
+    "hp_growth": 2450,
+    "id": 91343,
+    "max_hp": 64,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50263,
+      50483,
+      53423
+    ]
+  },
+  "91344": {
+    "base": 91340,
+    "hp_growth": 2703,
+    "id": 91344,
+    "max_hp": 70,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50264,
+      50484,
+      53424
+    ]
+  },
+  "91345": {
+    "base": 91340,
+    "hp_growth": 2957,
+    "id": 91345,
+    "max_hp": 77,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50265,
+      50485,
+      53425
+    ]
+  },
+  "91346": {
+    "base": 91340,
+    "hp_growth": 3210,
+    "id": 91346,
+    "max_hp": 83,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50266,
+      50486,
+      53426
+    ]
+  },
+  "91347": {
+    "base": 91340,
+    "hp_growth": 3464,
+    "id": 91347,
+    "max_hp": 90,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50267,
+      50487,
+      53427
+    ]
+  },
+  "91348": {
+    "base": 91340,
+    "hp_growth": 3717,
+    "id": 91348,
+    "max_hp": 97,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50268,
+      50488,
+      53428
+    ]
+  },
+  "91349": {
+    "base": 91340,
+    "hp_growth": 3971,
+    "id": 91349,
+    "max_hp": 103,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50269,
+      50489,
+      53429
+    ]
+  },
+  "91350": {
+    "base": 91340,
+    "hp_growth": 4224,
+    "id": 91350,
+    "max_hp": 110,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50270,
+      50490,
+      53430
+    ]
+  },
+  "91351": {
+    "base": 91340,
+    "hp_growth": 4477,
+    "id": 91351,
+    "max_hp": 116,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50271,
+      50491,
+      53431
+    ]
+  },
+  "91352": {
+    "base": 91340,
+    "hp_growth": 4731,
+    "id": 91352,
+    "max_hp": 123,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50272,
+      50492,
+      53432
+    ]
+  },
+  "91353": {
+    "base": 91340,
+    "hp_growth": 4984,
+    "id": 91353,
+    "max_hp": 130,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50273,
+      50493,
+      53433
+    ]
+  },
+  "91360": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 306,
+    "dodge": 1.16,
+    "dodge_limit": 6.5,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.52,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1338,
+    "icon": "qinghuayu",
+    "id": 91360,
+    "max_hp": 35,
+    "model_ID": "qinghuayu",
+    "name": "Late.299",
+    "nationality": 8,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 45,
+    "type": 2,
+    "weapon_ID": [
+      50280,
+      51600
+    ]
+  },
+  "91361": {
+    "base": 91360,
+    "hp_growth": 1538,
+    "id": 91361,
+    "max_hp": 40,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50281,
+      51601
+    ]
+  },
+  "91362": {
+    "base": 91360,
+    "hp_growth": 1739,
+    "id": 91362,
+    "max_hp": 45,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50282,
+      51602
+    ]
+  },
+  "91363": {
+    "base": 91360,
+    "hp_growth": 1940,
+    "id": 91363,
+    "max_hp": 50,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50283,
+      51603
+    ]
+  },
+  "91364": {
+    "base": 91360,
+    "hp_growth": 2140,
+    "id": 91364,
+    "max_hp": 56,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50284,
+      51604
+    ]
+  },
+  "91365": {
+    "base": 91360,
+    "hp_growth": 2341,
+    "id": 91365,
+    "max_hp": 61,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50285,
+      51605
+    ]
+  },
+  "91366": {
+    "base": 91360,
+    "hp_growth": 2541,
+    "id": 91366,
+    "max_hp": 66,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50286,
+      51606
+    ]
+  },
+  "91367": {
+    "base": 91360,
+    "hp_growth": 2742,
+    "id": 91367,
+    "max_hp": 71,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50287,
+      51607
+    ]
+  },
+  "91368": {
+    "base": 91360,
+    "hp_growth": 2943,
+    "id": 91368,
+    "max_hp": 77,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50288,
+      51608
+    ]
+  },
+  "91369": {
+    "base": 91360,
+    "hp_growth": 3143,
+    "id": 91369,
+    "max_hp": 82,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50289,
+      51609
+    ]
+  },
+  "91370": {
+    "base": 91360,
+    "hp_growth": 3344,
+    "id": 91370,
+    "max_hp": 87,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50290,
+      51610
+    ]
+  },
+  "91371": {
+    "base": 91360,
+    "hp_growth": 3545,
+    "id": 91371,
+    "max_hp": 92,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50291,
+      51611
+    ]
+  },
+  "91380": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.69,
+          -2.62,
+          0
+        ],
+        [
+          0.85,
+          0.17,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 76,
+    "dodge": 0.315,
+    "dodge_limit": 9,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.62,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1344,
+    "icon": "LGL32",
+    "id": 91380,
+    "max_hp": 35,
+    "model_ID": "LGL32",
+    "name": "LGL.32",
+    "nationality": 8,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 47,
+    "type": 1,
+    "weapon_ID": [
+      50040
+    ]
+  },
+  "91381": {
+    "base": 91380,
+    "hp_growth": 1546,
+    "id": 91381,
+    "max_hp": 40,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50041
+    ]
+  },
+  "91382": {
+    "base": 91380,
+    "hp_growth": 1747,
+    "id": 91382,
+    "max_hp": 45,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50042
+    ]
+  },
+  "91383": {
+    "base": 91380,
+    "hp_growth": 1949,
+    "id": 91383,
+    "max_hp": 51,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50043
+    ]
+  },
+  "91384": {
+    "base": 91380,
+    "hp_growth": 2150,
+    "id": 91384,
+    "max_hp": 56,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50044
+    ]
+  },
+  "91385": {
+    "base": 91380,
+    "hp_growth": 2352,
+    "id": 91385,
+    "max_hp": 61,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50045
+    ]
+  },
+  "91386": {
+    "base": 91380,
+    "hp_growth": 2554,
+    "id": 91386,
+    "max_hp": 66,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50046
+    ]
+  },
+  "91387": {
+    "base": 91380,
+    "hp_growth": 2755,
+    "id": 91387,
+    "max_hp": 72,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      50047
     ]
   },
   "95720": {
@@ -81698,6 +82916,849 @@
     "spawn_brownian": 1,
     "weapon_ID": [
       167640
+    ]
+  },
+  "167961": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 406,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.15,
+        -0.08,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1404,
+    "icon": "hainu",
+    "id": 167961,
+    "max_hp": 37,
+    "model_ID": "hainu",
+    "name": "光荣meta战斗机弹幕Lv1",
+    "nationality": 2,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 48,
+    "type": 1,
+    "weapon_ID": [
+      167971
+    ]
+  },
+  "167962": {
+    "base": 167961,
+    "hp_growth": 1615,
+    "id": 167962,
+    "max_hp": 42,
+    "name": "光荣meta战斗机弹幕Lv2",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167972
+    ]
+  },
+  "167963": {
+    "base": 167961,
+    "hp_growth": 1826,
+    "id": 167963,
+    "max_hp": 47,
+    "name": "光荣meta战斗机弹幕Lv3",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167973
+    ]
+  },
+  "167964": {
+    "base": 167961,
+    "hp_growth": 2036,
+    "id": 167964,
+    "max_hp": 53,
+    "name": "光荣meta战斗机弹幕Lv4",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167974
+    ]
+  },
+  "167965": {
+    "base": 167961,
+    "hp_growth": 2247,
+    "id": 167965,
+    "max_hp": 58,
+    "name": "光荣meta战斗机弹幕Lv5",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167975
+    ]
+  },
+  "167966": {
+    "base": 167961,
+    "hp_growth": 2458,
+    "id": 167966,
+    "max_hp": 64,
+    "name": "光荣meta战斗机弹幕Lv6",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167976
+    ]
+  },
+  "167967": {
+    "base": 167961,
+    "hp_growth": 2669,
+    "id": 167967,
+    "max_hp": 69,
+    "name": "光荣meta战斗机弹幕Lv7",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167977
+    ]
+  },
+  "167968": {
+    "base": 167961,
+    "hp_growth": 2879,
+    "id": 167968,
+    "max_hp": 75,
+    "name": "光荣meta战斗机弹幕Lv8",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167978
+    ]
+  },
+  "167969": {
+    "base": 167961,
+    "hp_growth": 3090,
+    "id": 167969,
+    "max_hp": 80,
+    "name": "光荣meta战斗机弹幕Lv9",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167979
+    ]
+  },
+  "167970": {
+    "base": 167961,
+    "hp_growth": 3301,
+    "id": 167970,
+    "max_hp": 86,
+    "name": "光荣meta战斗机弹幕Lv10",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167980
+    ]
+  },
+  "167981": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 406,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.15,
+        -0.08,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1404,
+    "icon": "jianyu",
+    "id": 167981,
+    "max_hp": 37,
+    "model_ID": "jianyu",
+    "name": "光荣meta鱼雷飞机弹幕Lv1",
+    "nationality": 2,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 48,
+    "type": 2,
+    "weapon_ID": [
+      167991
+    ]
+  },
+  "167982": {
+    "base": 167981,
+    "hp_growth": 1615,
+    "id": 167982,
+    "max_hp": 42,
+    "name": "光荣meta鱼雷飞机弹幕Lv2",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167992
+    ]
+  },
+  "167983": {
+    "base": 167981,
+    "hp_growth": 1826,
+    "id": 167983,
+    "max_hp": 47,
+    "name": "光荣meta鱼雷飞机弹幕Lv3",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167993
+    ]
+  },
+  "167984": {
+    "base": 167981,
+    "hp_growth": 2036,
+    "id": 167984,
+    "max_hp": 53,
+    "name": "光荣meta鱼雷飞机弹幕Lv4",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167994
+    ]
+  },
+  "167985": {
+    "base": 167981,
+    "hp_growth": 2247,
+    "id": 167985,
+    "max_hp": 58,
+    "name": "光荣meta鱼雷飞机弹幕Lv5",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167995
+    ]
+  },
+  "167986": {
+    "base": 167981,
+    "hp_growth": 2458,
+    "id": 167986,
+    "max_hp": 64,
+    "name": "光荣meta鱼雷飞机弹幕Lv6",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167996
+    ]
+  },
+  "167987": {
+    "base": 167981,
+    "hp_growth": 2669,
+    "id": 167987,
+    "max_hp": 69,
+    "name": "光荣meta鱼雷飞机弹幕Lv7",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167997
+    ]
+  },
+  "167988": {
+    "base": 167981,
+    "hp_growth": 2879,
+    "id": 167988,
+    "max_hp": 75,
+    "name": "光荣meta鱼雷飞机弹幕Lv8",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167998
+    ]
+  },
+  "167989": {
+    "base": 167981,
+    "hp_growth": 3090,
+    "id": 167989,
+    "max_hp": 80,
+    "name": "光荣meta鱼雷飞机弹幕Lv9",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      167999
+    ]
+  },
+  "167990": {
+    "base": 167981,
+    "hp_growth": 3301,
+    "id": 167990,
+    "max_hp": 86,
+    "name": "光荣meta鱼雷飞机弹幕Lv10",
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168000
+    ]
+  },
+  "168041": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 306,
+    "dodge": 1.11,
+    "dodge_limit": 4,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.52,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1338,
+    "icon": "feiji_dm",
+    "id": 168041,
+    "max_hp": 35,
+    "model_ID": "feiji_dm",
+    "name": "死亡主宰技能剑鱼",
+    "nationality": 112,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 45,
+    "type": 2,
+    "weapon_ID": [
+      168051
+    ]
+  },
+  "168042": {
+    "base": 168041,
+    "hp_growth": 1538,
+    "id": 168042,
+    "max_hp": 40,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168052
+    ]
+  },
+  "168043": {
+    "base": 168041,
+    "hp_growth": 1739,
+    "id": 168043,
+    "max_hp": 45,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168053
+    ]
+  },
+  "168044": {
+    "base": 168041,
+    "hp_growth": 1940,
+    "id": 168044,
+    "max_hp": 50,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168054
+    ]
+  },
+  "168045": {
+    "base": 168041,
+    "hp_growth": 2140,
+    "id": 168045,
+    "max_hp": 56,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168055
+    ]
+  },
+  "168046": {
+    "base": 168041,
+    "hp_growth": 2341,
+    "id": 168046,
+    "max_hp": 61,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168056
+    ]
+  },
+  "168047": {
+    "base": 168041,
+    "hp_growth": 2541,
+    "id": 168047,
+    "max_hp": 66,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168057
+    ]
+  },
+  "168048": {
+    "base": 168041,
+    "hp_growth": 2742,
+    "id": 168048,
+    "max_hp": 71,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168058
+    ]
+  },
+  "168049": {
+    "base": 168041,
+    "hp_growth": 2943,
+    "id": 168049,
+    "max_hp": 77,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168059
+    ]
+  },
+  "168050": {
+    "base": 168041,
+    "hp_growth": 3143,
+    "id": 168050,
+    "max_hp": 82,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168060
+    ]
+  },
+  "168091": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 306,
+    "dodge": 1.11,
+    "dodge_limit": 4,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.52,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1338,
+    "icon": "feiji_dm",
+    "id": 168091,
+    "max_hp": 35,
+    "model_ID": "feiji_dm",
+    "name": "死亡主宰集束雷剑鱼",
+    "nationality": 112,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 45,
+    "type": 2,
+    "weapon_ID": [
+      168101
+    ]
+  },
+  "168092": {
+    "base": 168091,
+    "hp_growth": 1538,
+    "id": 168092,
+    "max_hp": 40,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168102
+    ]
+  },
+  "168093": {
+    "base": 168091,
+    "hp_growth": 1739,
+    "id": 168093,
+    "max_hp": 45,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168103
+    ]
+  },
+  "168094": {
+    "base": 168091,
+    "hp_growth": 1940,
+    "id": 168094,
+    "max_hp": 50,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168104
+    ]
+  },
+  "168095": {
+    "base": 168091,
+    "hp_growth": 2140,
+    "id": 168095,
+    "max_hp": 56,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168105
+    ]
+  },
+  "168096": {
+    "base": 168091,
+    "hp_growth": 2341,
+    "id": 168096,
+    "max_hp": 61,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168106
+    ]
+  },
+  "168097": {
+    "base": 168091,
+    "hp_growth": 2541,
+    "id": 168097,
+    "max_hp": 66,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168107
+    ]
+  },
+  "168098": {
+    "base": 168091,
+    "hp_growth": 2742,
+    "id": 168098,
+    "max_hp": 71,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168108
+    ]
+  },
+  "168099": {
+    "base": 168091,
+    "hp_growth": 2943,
+    "id": 168099,
+    "max_hp": 77,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168109
+    ]
+  },
+  "168100": {
+    "base": 168091,
+    "hp_growth": 3143,
+    "id": 168100,
+    "max_hp": 82,
+    "spawn_brownian": 1,
+    "weapon_ID": [
+      168110
+    ]
+  },
+  "168411": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.68,
+          -0.667,
+          0
+        ],
+        [
+          0.97,
+          0.584,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 156,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.72,
+        -0.15,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 4019,
+    "icon": "fktv",
+    "id": 168411,
+    "max_hp": 104,
+    "model_ID": "fktv",
+    "name": "金狮 定点空袭",
+    "nationality": 11,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": -1,
+    "speed": 80,
+    "type": 3,
+    "weapon_ID": [
+      168421
+    ]
+  },
+  "168412": {
+    "base": 168411,
+    "hp_growth": 4543,
+    "id": 168412,
+    "max_hp": 118,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168422
+    ]
+  },
+  "168413": {
+    "base": 168411,
+    "hp_growth": 5067,
+    "id": 168413,
+    "max_hp": 132,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168423
+    ]
+  },
+  "168414": {
+    "base": 168411,
+    "hp_growth": 5591,
+    "id": 168414,
+    "max_hp": 145,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168424
+    ]
+  },
+  "168415": {
+    "base": 168411,
+    "hp_growth": 6115,
+    "id": 168415,
+    "max_hp": 159,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168425
+    ]
+  },
+  "168416": {
+    "base": 168411,
+    "hp_growth": 6639,
+    "id": 168416,
+    "max_hp": 173,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168426
+    ]
+  },
+  "168417": {
+    "base": 168411,
+    "hp_growth": 7164,
+    "id": 168417,
+    "max_hp": 186,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168427
+    ]
+  },
+  "168418": {
+    "base": 168411,
+    "hp_growth": 7688,
+    "id": 168418,
+    "max_hp": 200,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168428
+    ]
+  },
+  "168419": {
+    "base": 168411,
+    "hp_growth": 8212,
+    "id": 168419,
+    "max_hp": 214,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168429
+    ]
+  },
+  "168420": {
+    "base": 168411,
+    "hp_growth": 8736,
+    "id": 168420,
+    "max_hp": 227,
+    "spawn_brownian": -1,
+    "weapon_ID": [
+      168430
     ]
   },
   "200101": {
@@ -195692,6 +197753,386 @@
       1009084
     ]
   },
+  "1010075": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_unknownV03",
+    "id": 1010075,
+    "max_hp": 60,
+    "model_ID": "feiji_unknownV03",
+    "name": "【量产型】未知X拟态II类-航母舰载机 Lv1",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      1010080,
+      1010085
+    ]
+  },
+  "1010076": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "feiji_unknownV03",
+    "id": 1010076,
+    "max_hp": 90,
+    "model_ID": "feiji_unknownV03",
+    "name": "【量产型】未知X拟态II类-航母舰载机 Lv2",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      1010081,
+      1010086
+    ]
+  },
+  "1010077": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2240,
+    "icon": "feiji_unknownV03",
+    "id": 1010077,
+    "max_hp": 120,
+    "model_ID": "feiji_unknownV03",
+    "name": "【量产型】未知X拟态II类-航母舰载机 Lv3",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      1010082,
+      1010087
+    ]
+  },
+  "1010078": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2520,
+    "icon": "feiji_unknownV03",
+    "id": 1010078,
+    "max_hp": 150,
+    "model_ID": "feiji_unknownV03",
+    "name": "【量产型】未知X拟态II类-航母舰载机 Lv4",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      1010083,
+      1010088
+    ]
+  },
+  "1010079": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2800,
+    "icon": "feiji_unknownV03",
+    "id": 1010079,
+    "max_hp": 180,
+    "model_ID": "feiji_unknownV03",
+    "name": "【量产型】未知X拟态II类-航母舰载机 Lv5",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      1010084,
+      1010089
+    ]
+  },
   "1100765": {
     "ACC_growth": 0,
     "AP_growth": 2000,
@@ -258579,6 +261020,3121 @@
     "weapon_ID": [
       1001085,
       1001090
+    ]
+  },
+  "3261101": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "sairenfeiji_unknown3",
+    "id": 3261101,
+    "max_hp": 86,
+    "model_ID": "sairenfeiji_unknown3",
+    "name": "【2025荷兰SP活动T3】BOSS 「福尔尼德」 舰载机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3261102
+    ]
+  },
+  "3263101": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "sairenfeiji_unknown3",
+    "id": 3263101,
+    "max_hp": 86,
+    "model_ID": "sairenfeiji_unknown3",
+    "name": "【2025荷兰SP活动HT3】BOSS 「福尔尼德」 舰载机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3263102
+    ]
+  },
+  "3264001": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "sairenfeiji_unknown3",
+    "id": 3264001,
+    "max_hp": 86,
+    "model_ID": "sairenfeiji_unknown3",
+    "name": "【2025荷兰SP活动SP】BOSS 「福尔尼德」 舰载机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3264002
+    ]
+  },
+  "3266001": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "yak9k",
+    "id": 3266001,
+    "max_hp": 60,
+    "model_ID": "yak9k",
+    "name": "【2025荷兰SP活动剧情】我方北联航母蛋船 战斗机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      59053,
+      59453,
+      59913
+    ]
+  },
+  "3266002": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "yak9k",
+    "id": 3266002,
+    "max_hp": 60,
+    "model_ID": "yak9k",
+    "name": "【2025荷兰SP活动剧情】我方北联航母蛋船 轰炸机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      59351,
+      52651,
+      53051
+    ]
+  },
+  "3271001": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_unknownV02",
+    "id": 3271001,
+    "max_hp": 60,
+    "model_ID": "feiji_unknownV02",
+    "name": "【2025狮UR活动B1】BOSS 未知X结晶 航母 舰载机（随时间推移加快发射频率）",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3271002,
+      3271003
+    ]
+  },
+  "3271101": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_unknownV03",
+    "id": 3271101,
+    "max_hp": 60,
+    "model_ID": "feiji_unknownV03",
+    "name": "【2025狮UR活动B2】BOSS 未知X拟态II类 航母 舰载机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3271102,
+      3271103
+    ]
+  },
+  "3271209": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_unknownV03",
+    "id": 3271209,
+    "max_hp": 60,
+    "model_ID": "feiji_unknownV03",
+    "name": "【2025狮UR活动B3】BOSS 拟态兽-嘶鸣尖啸大海怪 第三波 舰载机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3271210,
+      3271211
+    ]
+  },
+  "3273001": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_unknownV02",
+    "id": 3273001,
+    "max_hp": 60,
+    "model_ID": "feiji_unknownV02",
+    "name": "【2025狮UR活动D1】BOSS 未知X结晶 航母 舰载机（随时间推移加快发射频率）",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3273002,
+      3273003
+    ]
+  },
+  "3273101": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_unknownV03",
+    "id": 3273101,
+    "max_hp": 60,
+    "model_ID": "feiji_unknownV03",
+    "name": "【2025狮UR活动D2】BOSS 未知X拟态II类 航母 舰载机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3273102,
+      3273103
+    ]
+  },
+  "3273209": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_unknownV03",
+    "id": 3273209,
+    "max_hp": 60,
+    "model_ID": "feiji_unknownV03",
+    "name": "【2025狮UR活动D3】BOSS 拟态兽-嘶鸣尖啸大海怪 第三波 舰载机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3273210,
+      3273211
+    ]
+  },
+  "3274001": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "haidahuangfeng",
+    "id": 3274001,
+    "max_hp": 86,
+    "model_ID": "haidahuangfeng",
+    "name": "【2025狮UR活动SP】BOSS 光荣META 战斗机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3274003
+    ]
+  },
+  "3274002": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "yinghuochong",
+    "id": 3274002,
+    "max_hp": 86,
+    "model_ID": "yinghuochong",
+    "name": "【2025狮UR活动SP】BOSS 光荣META 轰炸机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3274004
+    ]
+  },
+  "3275511": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 1,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.64,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 3772,
+    "icon": "huixing",
+    "id": 3275511,
+    "max_hp": 98,
+    "model_ID": "xiafei_yingxing",
+    "name": "【2025狮UR活动A】我方支援 女王之光号 发射器（隐形飞机）",
+    "nationality": 2,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 60,
+    "type": 3,
+    "weapon_ID": [
+      3275512,
+      3275513
+    ]
+  },
+  "3275521": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 1,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.64,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 3772,
+    "icon": "huixing",
+    "id": 3275521,
+    "max_hp": 98,
+    "model_ID": "xiafei_yingxing",
+    "name": "【2025狮UR活动B】我方支援 女王之光号 发射器（隐形飞机）",
+    "nationality": 2,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 60,
+    "type": 3,
+    "weapon_ID": [
+      3275522,
+      3275523
+    ]
+  },
+  "3275531": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 1,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.64,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 3772,
+    "icon": "huixing",
+    "id": 3275531,
+    "max_hp": 98,
+    "model_ID": "xiafei_yingxing",
+    "name": "【2025狮UR活动C】我方支援 女王之光号 发射器（隐形飞机）",
+    "nationality": 2,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 60,
+    "type": 3,
+    "weapon_ID": [
+      3275532,
+      3275533
+    ]
+  },
+  "3275541": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 1,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.64,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 3772,
+    "icon": "huixing",
+    "id": 3275541,
+    "max_hp": 98,
+    "model_ID": "xiafei_yingxing",
+    "name": "【2025狮UR活动D】我方支援 女王之光号 发射器（隐形飞机）",
+    "nationality": 2,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 60,
+    "type": 3,
+    "weapon_ID": [
+      3275542,
+      3275543
+    ]
+  },
+  "3276003": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "shenhaifeiji",
+    "id": 3276003,
+    "max_hp": 60,
+    "model_ID": "shenhaifeiji",
+    "name": "【2025狮UR活动 剧情】构建者 舰载机",
+    "nationality": 99,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3276004,
+      3276005
+    ]
+  },
+  "3279201": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "feiji_dm",
+    "id": 3279201,
+    "max_hp": 86,
+    "model_ID": "feiji_dm",
+    "name": "【2025黑岩联动SP2】BOSS 死亡主宰 战斗机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3279203
+    ]
+  },
+  "3279202": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "feiji_dm",
+    "id": 3279202,
+    "max_hp": 106,
+    "model_ID": "feiji_dm",
+    "name": "【2025黑岩联动SP2】BOSS 死亡主宰 轰炸机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3279204
+    ]
+  },
+  "3279307": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "feiji_dm",
+    "id": 3279307,
+    "max_hp": 86,
+    "model_ID": "feiji_dm",
+    "name": "【2025黑岩联动SP3】BOSS 死亡主宰 战斗机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3279309
+    ]
+  },
+  "3279308": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "feiji_dm",
+    "id": 3279308,
+    "max_hp": 106,
+    "model_ID": "feiji_dm",
+    "name": "【2025黑岩联动SP3】BOSS 死亡主宰 轰炸机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3279310
+    ]
+  },
+  "3279401": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 10,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_dm",
+    "id": 3279401,
+    "max_hp": 80,
+    "model_ID": "feiji_dm",
+    "name": "【2025黑岩联动 剧情战】死亡主宰空袭飞机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 1,
+    "spawn_brownian": 1,
+    "speed": 60,
+    "type": 1,
+    "weapon_ID": [
+      59793,
+      59813,
+      3279402
+    ]
+  },
+  "3284401": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "g50",
+    "id": 3284401,
+    "max_hp": 86,
+    "model_ID": "g50",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 战斗机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 1,
+    "weapon_ID": [
+      3284403
+    ]
+  },
+  "3284402": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "re2001",
+    "id": 3284402,
+    "max_hp": 86,
+    "model_ID": "re2001",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 轰炸机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3284404
+    ]
+  },
+  "3284407": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": {
+      "AI": 70291
+    },
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "SM79",
+    "id": 3284407,
+    "max_hp": 106,
+    "model_ID": "SM79",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 第二波 全屏陆基飞机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": -1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3284413,
+      3284414
+    ]
+  },
+  "3284408": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": {
+      "AI": 70292
+    },
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "SM79",
+    "id": 3284408,
+    "max_hp": 106,
+    "model_ID": "SM79",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 第二波 全屏陆基飞机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": -1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3284413,
+      3284414
+    ]
+  },
+  "3284409": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": {
+      "AI": 70293
+    },
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "SM79",
+    "id": 3284409,
+    "max_hp": 106,
+    "model_ID": "SM79",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 第二波 全屏陆基飞机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": -1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3284413,
+      3284414
+    ]
+  },
+  "3284410": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": {
+      "AI": 70294
+    },
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "SM79",
+    "id": 3284410,
+    "max_hp": 106,
+    "model_ID": "SM79",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 第二波 全屏陆基飞机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": -1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3284413,
+      3284414
+    ]
+  },
+  "3284411": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": {
+      "AI": 70295
+    },
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "SM79",
+    "id": 3284411,
+    "max_hp": 106,
+    "model_ID": "SM79",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 第二波 全屏陆基飞机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": -1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3284413,
+      3284414
+    ]
+  },
+  "3284412": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": {
+      "AI": 70296
+    },
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "SM79",
+    "id": 3284412,
+    "max_hp": 106,
+    "model_ID": "SM79",
+    "name": "【2025曾克SP活动】BOSS 帝国警视长 第二波 全屏陆基飞机",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": -1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3284413,
+      3284414
+    ]
+  },
+  "3289065": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 36,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1680,
+    "icon": "feiji_diezhan",
+    "id": 3289065,
+    "max_hp": 64,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母轰炸机 Lv1",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3289075
+    ]
+  },
+  "3289066": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 48,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 1960,
+    "icon": "feiji_diezhan",
+    "id": 3289066,
+    "max_hp": 88,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母轰炸机 Lv2",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3289076
+    ]
+  },
+  "3289067": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 62,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2240,
+    "icon": "feiji_diezhan",
+    "id": 3289067,
+    "max_hp": 112,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母轰炸机 Lv3",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3289077
+    ]
+  },
+  "3289068": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 78,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2520,
+    "icon": "feiji_diezhan",
+    "id": 3289068,
+    "max_hp": 136,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母轰炸机 Lv4",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3289078
+    ]
+  },
+  "3289069": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.71,
+          -1.73,
+          0
+        ],
+        [
+          0.82,
+          2.04,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 98,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2800,
+    "icon": "feiji_diezhan",
+    "id": 3289069,
+    "max_hp": 160,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母轰炸机 Lv5",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 33,
+    "type": 3,
+    "weapon_ID": [
+      3289079
+    ]
+  },
+  "3289070": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 65,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2280,
+    "icon": "feiji_diezhan",
+    "id": 3289070,
+    "max_hp": 80,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母战斗机 Lv1",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 30,
+    "type": 1,
+    "weapon_ID": [
+      3289080,
+      1005675
+    ]
+  },
+  "3289071": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 85,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 2660,
+    "icon": "feiji_diezhan",
+    "id": 3289071,
+    "max_hp": 110,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母战斗机 Lv2",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 30,
+    "type": 1,
+    "weapon_ID": [
+      3289081,
+      1005676
+    ]
+  },
+  "3289072": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 110,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 3040,
+    "icon": "feiji_diezhan",
+    "id": 3289072,
+    "max_hp": 140,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母战斗机 Lv3",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 30,
+    "type": 1,
+    "weapon_ID": [
+      3289082,
+      1005677
+    ]
+  },
+  "3289073": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 140,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 3420,
+    "icon": "feiji_diezhan",
+    "id": 3289073,
+    "max_hp": 170,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母战斗机 Lv4",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 30,
+    "type": 1,
+    "weapon_ID": [
+      3289083,
+      1005678
+    ]
+  },
+  "3289074": {
+    "ACC_growth": 0,
+    "AP_growth": 2000,
+    "accuracy": 23,
+    "attack_power": 2,
+    "bound_bone": {
+      "weapon": [
+        [
+          0.56,
+          -0.76,
+          0
+        ],
+        [
+          0.48,
+          0.99,
+          0
+        ]
+      ]
+    },
+    "cld_box": [
+      1,
+      1,
+      1
+    ],
+    "cld_offset": [
+      0,
+      0,
+      0
+    ],
+    "crash_DMG": 175,
+    "dodge": 1,
+    "dodge_limit": 0,
+    "funnel_behavior": "",
+    "fx_container": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "hp_growth": 3800,
+    "icon": "feiji_diezhan",
+    "id": 3289074,
+    "max_hp": 200,
+    "model_ID": "feiji_diezhan",
+    "name": "【2025曾克SP活动】航母战斗机 Lv5",
+    "nationality": 3,
+    "position_offset": [
+      0,
+      5,
+      0
+    ],
+    "scale": 0.75,
+    "spawn_brownian": 1,
+    "speed": 30,
+    "type": 1,
+    "weapon_ID": [
+      3289084,
+      1005679
     ]
   }
 }

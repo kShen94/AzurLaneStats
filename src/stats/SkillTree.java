@@ -9,12 +9,15 @@ public class SkillTree {
 	private ArrayList<SkillTree> nodes = new ArrayList<SkillTree>();
 	private String type;
 	private String id;
+	private String tag;
 	
-	public SkillTree(String type,String id) {
+	public SkillTree(String type,String id, String tag) {
 		this.id = id;
 		this.type = type;
+		this.tag = tag;
 		parse();
 	}
+	
 	
 	public ArrayList<SkillTree> getNodes(){
 		return nodes;
@@ -29,6 +32,10 @@ public class SkillTree {
 	}
 	
 	public String getFullName() {
+		if(!tag.isEmpty()) {
+			String r = "(x"+tag+")";
+			return type+"_"+id + r;
+		}
 		return type+"_"+id;
 	}
 	
@@ -40,6 +47,7 @@ public class SkillTree {
 	}
 	
 	private void parseSkill() {
+		String quota = "";
 		JSONArray b;
 		JSONObject obj = JsonData.skillCfg.getJSONObject("skill_"+id);
 		//navigates through json to find effect_list of the object
@@ -71,22 +79,31 @@ public class SkillTree {
 			}
 			else if(effect.has("arg_list") && effect.get("arg_list") instanceof JSONObject) {
 				effect = effect.getJSONObject("arg_list");
+				if(effect.has("quota"))
+					quota = effect.getString("quota");
 				//if skillID is found, add new skillID -> skillID to map
 				if(effect.has("skill_id")) {
-					addSkill(Integer.toString(effect.getInt("skill_id")));
+					addSkill(Integer.toString(effect.getInt("skill_id")),quota);
 				}
 				//if skillID is found, add new skillID -> buffID to map
 				else if(effect.has("buff_id")) {
-					addBuff(Integer.toString(effect.getInt("buff_id")));
+					addBuff(Integer.toString(effect.getInt("buff_id")),quota);
+				
+				}
+				else if(effect.has("aircraft_id_list")) {
+					String aircraftID = effect.getJSONArray("aircraft_id_list").get(0).toString();
+					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
+					addPointAirStrikeWeapon(Integer.toString(effect.getInt("weapon_id")),target, aircraftID);
+				}
 				//if skillID is found, add new skillID -> weaponID to map
-				}else if(effect.has("weapon_id")) {
+				else if(effect.has("weapon_id")) {
 					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
 					addWeapon(Integer.toString(effect.getInt("weapon_id")),target);
 				}
 				else if(effect.has("skill_id_list")) {
 					JSONArray list = effect.getJSONArray("skill_id_list");
 					for(int l = 0; l < list.length(); l++) {
-						addSkill(Integer.toString(list.getInt(l)));
+						addSkill(Integer.toString(list.getInt(l)),quota);
 					}
 				}
 			}
@@ -96,6 +113,7 @@ public class SkillTree {
 	private void parseBuff() {
 		JSONArray b;
 		JSONObject obj = JsonData.buffCfg.getJSONObject("buff_"+id);
+		String quota = "";
 		//navigates through json to find effect_list of the object
 		if (obj.has("10") && (obj.get("10") instanceof JSONObject) && obj.getJSONObject("10").has("effect_list")) {
 			b = obj.getJSONObject("10").getJSONArray("effect_list");
@@ -115,12 +133,19 @@ public class SkillTree {
 			JSONObject effect = b.getJSONObject(i);
 			if(effect.has("arg_list") && effect.get("arg_list") instanceof JSONObject) {
 				effect = effect.getJSONObject("arg_list");
+				if(effect.has("quota"))
+					quota = effect.getInt("quota")+"";
 				//if skill does not exist, add to tree
 				if(effect.has("skill_id")) 
-					addSkill(Integer.toString(effect.getInt("skill_id")));
+					addSkill(Integer.toString(effect.getInt("skill_id")),quota);
 				//if buff does not exist, add to tree
 				else if(effect.has("buff_id")) 
-					addBuff(Integer.toString(effect.getInt("buff_id")));
+					addBuff(Integer.toString(effect.getInt("buff_id")),quota);
+				else if(effect.has("aircraft_id_list")) {
+					String aircraftID = effect.getJSONArray("aircraft_id_list").get(0).toString();
+					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
+					addPointAirStrikeWeapon(Integer.toString(effect.getInt("weapon_id")),target, aircraftID);
+				}
 				//if weaponID is found, add current buffID -> weaponID to map
 				else if(effect.has("weapon_id")) {
 					String target = b.getJSONObject(i).optString("target_choise", "TargetNil");
@@ -129,25 +154,31 @@ public class SkillTree {
 				else if(effect.has("skill_id_list")) {
 					JSONArray list = effect.getJSONArray("skill_id_list");
 					for(int l = 0; l < list.length(); l++) {
-						addSkill(Integer.toString(list.getInt(l)));
+						addSkill(Integer.toString(list.getInt(l)),quota);
 					}
 				}
 			}
 		}
 	}
 	
-	private void addSkill(String id) {
+	
+	private void addSkill(String id, String repeat) {
 		if(Abilities.addDict("skill_"+id))
-			nodes.add(new SkillTree("skill",id));
+			nodes.add(new SkillTree("skill",id, repeat));
 	}
 	
-	private void addBuff(String id) {
+	private void addBuff(String id, String repeat) {
 		if(Abilities.addDict("buff_"+id))
-			nodes.add(new SkillTree("buff",id));
+			nodes.add(new SkillTree("buff",id, repeat));
 	}
 	private void addWeapon(String id, String target) {
 		Abilities.addWeapon(id, target);
-		nodes.add(new SkillTree("weapon",id));
+		nodes.add(new SkillTree("weapon",id, ""));
+	}
+	
+	private void addPointAirStrikeWeapon(String id, String target, String aircraftID) {
+		Abilities.addPointAirstrikeWeapon(id, target, aircraftID);
+		nodes.add(new SkillTree("weapon",id,""));
 	}
 	
 	private void addSlashWeapon(SlashWeapon sw,String id) {

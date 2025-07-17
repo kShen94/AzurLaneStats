@@ -4,6 +4,7 @@ Akagi µ, 30710
 Akagi-chan, 30709
 Akizuki Ritsuko,1070005
 Albacore µ, 10805
+Algerie.META,970302
 Algérie.META,970302
 Amagi (CV), 30715
 Amagi-chan, 30407
@@ -15,7 +16,9 @@ Asuka ,1100001
 Asukagawa Chise ,1080006
 BILI 22,1020001
 BILI 33,1020002
+BLACK★ROCK SHOOTER,1120001
 Baltimore µ, 10325
+Bearn.META,970704
 Boise μ, 10232
 Bolzano.META,970306
 Béarn.META,970704
@@ -24,23 +27,29 @@ Chen Hai,50601
 Chien Wu,50301
 Clevelad, 10220
 Cleveland µ, 10224
+DEAD MASTER,1120002
 Dido μ, 20228
 Erebus.META,971301
 FFNF Alsace,80503
 FFNF Bayard,89904
+FFNF Bearn,80701
 FFNF Brennus,80302
 FFNF Brest,89903
 FFNF Béarn,80701
 FFNF Champagne,89902
+FFNF Emile Bertin,80201
 FFNF Forbin,80102
 FFNF Guichen,80203
 FFNF Jeanne d'Arc,80202
 FFNF L'Opiniâtre,80104
+FFNF Le Temeraire,80103
 FFNF Le Terrible,80107
 FFNF Le Triomphant,80101
 FFNF Le Téméraire,80103
 FFNF Lyon,80502
+FFNF Maille Breze,80108
 FFNF Maillé Brézé,80108
+FFNF Painleve,80702
 FFNF Painlevé,80702
 FFNF Richelieu,80501
 FFNF Saint-Louis,89901
@@ -59,7 +68,9 @@ Futami Ami,1070006
 Futami Mami,1070007
 Gascogne µ, 900203
 Giulio Cesare.META,970507
+Glorious.META,970707
 Gneisenau.META,970401
+Grenville.META,970107
 HDN Black Heart,1010006
 HDN Blanc,1010003
 HDN Green Heart,1010008
@@ -88,6 +99,7 @@ HMS Centaur,20604
 HMS Charybdis,20230
 HMS Chaser,20605
 HMS Cheshire,29903
+HMS Cleopatra,20235
 HMS Comet,20108
 HMS Crescent,20109
 HMS Curacoa,20221
@@ -111,6 +123,7 @@ HMS Formidable,20714
 HMS Fortune,20112
 HMS Foxhound,20111
 HMS Galatea,20214
+HMS Gallant,20139
 HMS Glasgow,20226
 HMS Glorious,20706
 HMS Gloucester,20210
@@ -138,6 +151,7 @@ HMS Jupiter,20124
 HMS Kent,20303
 HMS King George V,20505
 HMS Leander,20201
+HMS Lion,20516
 HMS Liverpool,20234
 HMS London,20301
 HMS Manchester,20209
@@ -161,7 +175,6 @@ HMS Rodney,20504
 HMS Royal Oak,20514
 HMS Scylla,20233
 HMS Sheffield,20208
-HMS Sheffield,20225
 HMS Shropshire,20302
 HMS Sirius,20220
 HMS Southampton,20207
@@ -170,6 +183,8 @@ HMS Sussex,20309
 HMS Swiftsure,20223
 HMS Terror,21302
 HMS Theseus,20608
+HMS Trafalgar,20138
+HMS Trinidad,20236
 HMS Unicorn,20603
 HMS Valiant,20510
 HMS Vampire,20123
@@ -177,6 +192,9 @@ HMS Vanguard,20513
 HMS Victorious,20704
 HMS Warspite,20502
 HMS York,20307
+HNLMS De Zeven Provinciën,110201
+HNLMS Evertsen,110101
+HNLMS Gouden Leeuw,119901
 Hai Chi,50208
 Hai Tien,50207
 Hai Yung,50210
@@ -187,10 +205,12 @@ Hiei-chan, 30406
 Hiei.META,970405
 Hime,1080009
 Hiryu.META,970701
+Hiyou.META,970601
 Hiyō.META,970601
 Homura,1100003
 Honoka,1060002
 Hornet.META,970706
+Houshou.META,970604
 Hu Pen,50106
 Huan Ch'ang,50401
 Hunter.META,970101
@@ -202,7 +222,6 @@ IJN Akagi,30701
 IJN Akashi,31201
 IJN Akatsuki,30109
 IJN Amagi,30405
-IJN Amagi,30715
 IJN Aoba,30303
 IJN Arashio,30166
 IJN Ariake,30125
@@ -216,6 +235,7 @@ IJN Azuma,39904
 IJN Chikuma,30306
 IJN Chitose,30608
 IJN Chiyoda,30609
+IJN Choukai,30314
 IJN Chōkai,30314
 IJN Daisen,39907
 IJN Fubuki,30101
@@ -223,6 +243,7 @@ IJN Fumizuki,30138
 IJN Furutaka,30301
 IJN Fuso,30501
 IJN Haguro,30310
+IJN Hakuryuu,39905
 IJN Hakuryū,39905
 IJN Hamakaze,30161
 IJN Hanazuki,30182
@@ -234,8 +255,12 @@ IJN Hatsushimo,30124
 IJN Hatsuzuki,30189
 IJN Hibiki,30110
 IJN Hiei,30402
+IJN Hiryuu,30704
 IJN Hiryū,30704
+IJN Hiyou,30601
 IJN Hiyō,30601
+IJN Houshou,30603
+IJN Hyuuga,30504
 IJN Hyūga,30504
 IJN Hōshō,30603
 IJN I13,31701
@@ -252,10 +277,13 @@ IJN Ise,30503
 IJN Isokaze,30160
 IJN Isuzu,30205
 IJN Izumo,39902
+IJN Jintsuu,30213
 IJN Jintsū,30213
+IJN Jun'you,30602
 IJN Jun'yō,30602
 IJN Kaga,30507
 IJN Kaga,30702
+IJN Kagerou,30117
 IJN Kagerō,30117
 IJN Kako,30302
 IJN Kamikaze,30130
@@ -271,6 +299,7 @@ IJN Kirishima,30404
 IJN Kisaragi,30133
 IJN Kitakaze,39903
 IJN Kiyonami,30154
+IJN Kongou,30401
 IJN Kongō,30401
 IJN Kumano,30318
 IJN Kuroshio,30127
@@ -287,6 +316,7 @@ IJN Mogami,30210
 IJN Musashi,30510
 IJN Mutsu,30506
 IJN Mutsuki,30132
+IJN Myoukou,30307
 IJN Myōkō,30307
 IJN Nachi,30308
 IJN Naganami,30183
@@ -301,6 +331,8 @@ IJN Nowaki,30120
 IJN Oite,30185
 IJN Owari,30513
 IJN Oyashio,30128
+IJN Ryuuhou,30607
+IJN Ryuujou,30606
 IJN Ryūhō,30607
 IJN Ryūjō,30606
 IJN Sakawa,30223
@@ -312,13 +344,18 @@ IJN Shinano,30708
 IJN Shiranui,30118
 IJN Shiratsuyu,30113
 IJN Shirayuki,30102
+IJN Shouhou,30605
+IJN Shoukaku,30705
 IJN Shōhō,30605
 IJN Shōkaku,30705
+IJN Souryuu,30703
 IJN Suruga,30514
 IJN Suzunami ,30191
 IJN Suzutsuki,30184
 IJN Suzuya,30317
 IJN Sōryū,30703
+IJN Taihou,30707
+IJN Taihou,30713
 IJN Taihō,30707
 IJN Taihō,30713
 IJN Takao,30311
@@ -337,28 +374,39 @@ IJN Yamashiro,30502
 IJN Yoizuki,30158
 IJN Yukikaze,30116
 IJN Yura,30207
+IJN Yuubari,30201
+IJN Yuudachi,30114
+IJN Yuugure,30126
 IJN Yūbari,30201
 IJN Yūdachi,30114
 IJN Yūgure,30126
+IJN Zuihou,30604
 IJN Zuihō,30604
 IJN Zuikaku,30706
 IJN Ōshio,30164
 Ikaruga,1100002
 Illustrious µ, 20711
+Jintsuu.META,970205
 Jintsū.META,970205
+Jun'you.META,970602
 Jun'yō.META,970602
 KMS Admiral Graf Spee,40305
 KMS Admiral Hipper,40301
+KMS Admiral Zenker,40407
+KMS Agir,49905
 KMS Alvitr,40406
 KMS August von Parseval,49906
 KMS Bernd von Arnim,40111
 KMS Bismarck Zwei,40505
 KMS Bismarck,40501
+KMS Blucher,40302
 KMS Blücher,40302
+KMS Brunhilde,40405
 KMS Brünhilde,40405
 KMS Deutschland,40304
 KMS Duisburg,40211
 KMS Elbe,40602
+KMS Erich Koellner,40113
 KMS Felix Schultz,49908
 KMS Friedrich Carl,40314
 KMS Friedrich Eckoldt,40116
@@ -367,7 +415,9 @@ KMS Fritz Rumey,40704
 KMS Georg Thiele,40102
 KMS Gneisenau,40402
 KMS Graf Zeppelin,40701
+KMS Hans Ludemann,40118
 KMS Hans Lüdemann,40118
+KMS Hermann Kunne,40119
 KMS Hermann Künne,40119
 KMS Hindenburg,49909
 KMS Jade,40603
@@ -379,6 +429,8 @@ KMS Leberecht Maass,40101
 KMS Leipzig,40204
 KMS Magdeburg,40206
 KMS Mainz,49903
+KMS Mecklenburg,49910
+KMS Nurnberg,40205
 KMS Nürnberg,40205
 KMS Odin,49904
 KMS Otto von Alvensleben,40199
@@ -399,6 +451,7 @@ KMS U-37,40810
 KMS U-410,40811
 KMS U-47,40802
 KMS U-522,40807
+KMS U-552,40814
 KMS U-556,40804
 KMS U-557,40803
 KMS U-73,40805
@@ -423,6 +476,7 @@ KMS Ägir,49905
 Kala Ideas,1090006
 Kasumi,1060003
 Kasumi.META,970106
+Kawakaze.META,970108
 Kimberly.META,970104
 Kirov.META,970206
 Kisaragi Chihaya,1070002
@@ -441,6 +495,8 @@ Le Malin µ, 90112
 Le Téméraire μ, 80109
 Li'l Sandy, 10221
 Lila Decyrus,1090004
+Little Agir, 40316
+Little Anchorage, 10329
 Little Bel, 20218
 Little Cheshire, 20310
 Little Enterprise, 10799
@@ -452,10 +508,12 @@ Little Renown, 20404
 Little Spee, 40313
 Luna,1060008
 Lung Wu,50105
+MNF Algerie,90302
 MNF Algérie,90302
 MNF Clemenceau,90502
 MNF Dunkerque,90401
 MNF Dupleix,90303
+MNF Epee,90106
 MNF Flandre,99902
 MNF Fleuret,90105
 MNF Foch,90301
@@ -484,6 +542,7 @@ MOT Golden Hind,960003
 MOT Mary Celeste,960004
 MOT Portsmouth Adventure,960010
 MOT Royal Fortune,960001
+MOT Sao Martinho,960002
 MOT São Martinho,960002
 MOT Whydah,960005
 Marie Rose,1060001
@@ -550,6 +609,7 @@ RN Torricelli,60801
 RN Trento,60301
 RN Trieste,60304
 RN Vincenzo Gioberti,60103
+RN Vittorio Cuniberti,69903
 RN Vittorio Veneto,60501
 RN Zara,60302
 ROC Chao Ho,50205
@@ -566,8 +626,10 @@ Roon µ, 40308
 Rurutie,1030003
 SMS Elbing,40208
 SMS Emden,40207
+SMS Lutzow,40404
 SMS Lützow,40404
 SMS Seydlitz,40403
+SMS Thuringen,40504
 SMS Thüringen,40504
 SMS Yorck,40311
 SN Admiral Nakhimov,79902
@@ -575,10 +637,12 @@ SN Arkhangelsk,70506
 SN Avrora,70201
 SN Chapayev,70203
 SN Chkalov,79901
+SN Dmitri Donskoi,79903
 SN Gangut,70501
 SN Gremyashchy,70107
 SN Gromky,70108
 SN Grozny,70102
+SN Kazan,70509
 SN Kiev,70110
 SN Kirov,70204
 SN Kronshtadt,71801
@@ -587,6 +651,7 @@ SN Kuybyshev,70205
 SN Minsk,70103
 SN Murmansk,70206
 SN Ognevoy,70111
+SN Oleg,70208
 SN Pamiat' Merkuria,70202
 SN Poltava,70508
 SN Sevastopol,70507
@@ -604,12 +669,16 @@ Sairenji Haruna,1110005
 Saraana,1030005
 Scharnhorst.META,970402
 Serri Glaus,1090005
+Sheffield µ, 20225
 Sheffield.META,970203
 Shinano-chan, 30714
+Shinjou Akane ,1080002
 Shinjō Akane ,1080002
 Shirakami Fubuki ,1050001
+Souryuu.META,970703
 Sōryū.META,970703
 Taihou µ, 30711
+Taihou.META,970705
 Taihō.META,970705
 Takarada Rikka ,1080001
 Tamaki,1060009
@@ -697,6 +766,7 @@ USS Intrepid,10711
 USS Jenkins,10130
 USS Juneau,10207
 USS Kalk,10137
+USS Kansas,19906
 USS Kearsarge,19904
 USS Kimberly,10138
 USS Laffey II,10151
@@ -772,6 +842,7 @@ Vestal.META,971201
 Wichita.META,970304
 Yamashiro.META,970502
 Yumi,1100004
+Yuuyaki ,1100007
 Yūyaki ,1100007
 Zeppy, 40702
 Ōkami Mio ,1050007

@@ -18,9 +18,9 @@ public class UpdateShipIds {
 			202284, 207114, 901124, 403084, 307114, 701054, 108054, 103254, 307104, 9002034,
 			403074, 102244, 102204, 202184, 207134, 203104, 403124, 107994, 403134, 204044,
 			407024, 307094, 304064, 304074, 403154, 302244, 102324, 304084, 801094, 307144,
-			405064, 102214, 30715
+			405064, 102214, 307154, 202254, 403164, 103294
 			);
-
+	private static String[] SPECIALCHAR = new String[]{"ō","é","É","ū","ü","Ä","ã"};
 	private static List<String> slist = new ArrayList<String>() {
 		{
 			add("UNIV Universal Bulin, 100001");
@@ -46,6 +46,7 @@ public class UpdateShipIds {
 			add("Kongou μ, 30408");
 			add("Le Téméraire μ, 80109");
 			add("Le Malin µ, 90112");
+			add("Sheffield µ, 20225");
 			
 			add("Clevelad, 10220");
 			add("Li'l Sandy, 10221");
@@ -58,6 +59,8 @@ public class UpdateShipIds {
 			add("Little Illustrious, 20709");
 			add("Little Friedrich, 40506");
 			add("Little Renown, 20404");
+			add("Little Anchorage, 10329");
+			add("Little Agir, 40316");
 			add("Zeppy, 40702");
 			add("Akagi-chan, 30709");
 			add("Hiei-chan, 30406");
@@ -68,6 +71,36 @@ public class UpdateShipIds {
 		}
 	};
 
+	public static String normalizeName(String name) {
+		String newName = name;
+		if(newName.contains("Ō"))
+			newName = newName.replaceAll("Ō", "Oo");
+		if(newName.contains("ō"))
+			newName = newName.replaceAll("ō", "ou");
+		if(newName.contains("é"))
+			newName =newName.replaceAll("é", "e");
+		if(newName.contains("É"))
+			newName =newName.replaceAll("É", "E");
+		if(newName.contains("ū"))
+			newName =newName.replaceAll("ū", "uu");
+		if(newName.contains("ü"))
+			newName =newName.replaceFirst("ü", "u");
+		if(newName.contains("Ä"))
+			newName =newName.replaceAll("Ä", "A");
+		if(newName.contains("ã"))
+			newName =newName.replaceAll("ã", "a");
+		
+		return newName;
+	}
+	
+	public static boolean hasSpecialChar(String name) {
+		for(String s: SPECIALCHAR) {
+			if(name.contains(s))
+				return true;
+		}
+		return false;
+	}
+	
 	public static void updateShipIds() {
 		try {
 			// Open JSON files
@@ -81,8 +114,11 @@ public class UpdateShipIds {
 				if (skip.contains(x)) continue;
 				if (shipStats.has(String.valueOf(x))) {
 					JSONObject ship = shipStats.getJSONObject(String.valueOf(x));
-					String entry = ship.getString("english_name") + "," + shipTemplate.getJSONObject(String.valueOf(x)).getInt("group_type");
-					slist.add(entry);
+                    String shipName = ship.getString("english_name");
+                    String groupID = shipTemplate.getJSONObject(String.valueOf(x)).getInt("group_type")+"";
+                    slist.add(shipName + ","+ groupID);
+                    if(hasSpecialChar(shipName))
+                    	slist.add(normalizeName(shipName)+","+groupID);
 				}
 			}
 			
@@ -90,8 +126,11 @@ public class UpdateShipIds {
                 if (skip.contains(x)) continue;
                 if (shipStats.has(String.valueOf(x))) {
                     JSONObject ship = shipStats.getJSONObject(String.valueOf(x));
-                    String entry = ship.getString("english_name") + "," + shipTemplate.getJSONObject(String.valueOf(x)).getInt("group_type");
-                    slist.add(entry);
+                    String shipName = ship.getString("english_name");
+                    String groupID = shipTemplate.getJSONObject(String.valueOf(x)).getInt("group_type")+"";
+                    slist.add(shipName + ","+ groupID);
+                    if(hasSpecialChar(shipName))
+                    	slist.add(normalizeName(shipName)+","+groupID);
                 }
             }
 			slist = new ArrayList<>(new TreeSet<String>(slist));

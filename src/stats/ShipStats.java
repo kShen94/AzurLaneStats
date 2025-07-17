@@ -207,12 +207,17 @@ public class ShipStats {
 		//check for bb gun mounts in shipTemplate
 		JSONArray skills = shipTemplate.getJSONObject(id).getJSONArray("hide_buff_list");
 		for (int i = 0; i<skills.length();i++) {
-			if(skills.getInt(i) == 1) {
-				fgm++;
+			int mgm = skills.getInt(i);
+			if(mgm == 1 || mgm == 20000) {
+				fgm=2;
 				return;
 			}
-			if(skills.getInt(i) == 2) {
-				fgm+= 2;
+			else if(mgm == 2 || mgm == 20001) {
+				fgm=3;
+				return;
+			}
+			else if (mgm == 20002) {
+				fgm=4;
 				return;
 			}
 		}

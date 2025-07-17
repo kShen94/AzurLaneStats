@@ -84,7 +84,9 @@ public class ShipIds {
 		shipId.put("Boise u", "10232");
 		shipId.put("Kongou u", "30408");
 		shipId.put("Le Téméraire u", "80109");
-		
+		shipId.put("Sheffield u", "20225");
+
+		shipId.put("Z13", "40113");
 
 	}
 	public static String getShipID(String name) {
